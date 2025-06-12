@@ -1,2 +1,42 @@
-/data
+# Large model files (exceed GitHub 100MB limit)
+model/*.joblib
+model/*_model_*.joblib
+model/best_model_*.joblib
+*.joblib
+*.pkl
+*.pickle
+
+# Data files (if large)
+/data/*.csv
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keep only metadata and configuration files
+!model/model_metadata.json
+!model/evaluation_results.json
+!model/feature_importance.json
+
+# Original entries
 /data_science_plan.md
