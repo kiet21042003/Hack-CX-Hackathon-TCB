@@ -1,0 +1,36 @@
+{
+  "analysis_date": "2025-06-12T17:08:39.385074",
+  "datasets_analyzed": [
+    "customers",
+    "products",
+    "adoption_logs"
+  ],
+  "key_findings": [
+    "Product portfolio: 1000 products across 10 categories",
+    "Average conversion rate: 11.73%",
+    "Adoption logs: 949,650 records",
+    "Overall adoption rate: 25.07%",
+    "customers: Data quality issues detected"
+  ],
+  "data_shapes": {
+    "products": [
+      1000,
+      26
+    ],
+    "customers": [
+      100000,
+      37
+    ],
+    "adoption_logs": [
+      949650,
+      10
+    ]
+  },
+  "recommendations": [
+    "Implement comprehensive data preprocessing pipeline",
+    "Develop customer-product interaction features",
+    "Address class imbalance in modeling",
+    "Use time-based validation strategy",
+    "Focus on business-relevant evaluation metrics"
+  ]
+}

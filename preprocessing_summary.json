@@ -1,0 +1,84 @@
+{
+  "preprocessing_date": "2025-06-12T17:10:52.907597",
+  "datasets_processed": [
+    "products",
+    "adoption_logs"
+  ],
+  "original_shapes": {
+    "products": [
+      1000,
+      26
+    ],
+    "adoption_logs": [
+      949650,
+      10
+    ]
+  },
+  "processed_shapes": {
+    "products": [
+      1000,
+      70
+    ],
+    "adoption_logs": [
+      949650,
+      12
+    ]
+  },
+  "preprocessing_steps": [
+    "[17:08:39] Starting missing value treatment",
+    "[17:08:39] No duplicates found",
+    "[17:08:39] Starting categorical encoding",
+    "[17:08:39] Frequency encoded product_id (high cardinality: 1000)",
+    "[17:08:39] One-hot encoded category (10 categories)",
+    "[17:08:39] One-hot encoded tier (5 categories)",
+    "[17:08:39] One-hot encoded reward_type (5 categories)",
+    "[17:08:39] One-hot encoded eligibility (13 categories)",
+    "[17:08:39] One-hot encoded compliance_tag (5 categories)",
+    "[17:08:39] Frequency encoded channels (high cardinality: 273)",
+    "[17:08:39] Frequency encoded target_segments (high cardinality: 277)",
+    "[17:08:39] One-hot encoded geo_applic (6 categories)",
+    "[17:08:39] One-hot encoded merchant_industry (8 categories)",
+    "[17:08:39] Frequency encoded valid_window (high cardinality: 92)",
+    "[17:08:39] One-hot encoded popularity_trend (3 categories)",
+    "[17:08:39] Starting feature scaling (standard)",
+    "[17:08:39] Scaled 22 numeric features",
+    "[17:08:39] Starting missing value treatment",
+    "[17:08:40] No duplicates found",
+    "[17:08:40] Starting categorical encoding",
+    "[17:08:41] Frequency encoded user_id (high cardinality: 100000)",
+    "[17:08:41] Frequency encoded product_id (high cardinality: 1000)",
+    "[17:08:41] Starting feature scaling (standard)",
+    "[17:08:41] Scaled 10 numeric features"
+  ],
+  "feature_engineering_steps": [
+    "[17:08:39] Creating business logic features",
+    "[17:08:39] Creating temporal features",
+    "[17:08:39] Extracted temporal features from offer_dates",
+    "[17:08:40] Creating temporal features",
+    "[17:08:40] Created tenure-based features",
+    "[17:08:40] Creating business logic features"
+  ],
+  "data_quality_metrics": {
+    "products": {
+      "missing_values": 5000,
+      "duplicates": 0,
+      "numeric_features": 22,
+      "categorical_features": 0,
+      "total_features": 70
+    },
+    "adoption_logs": {
+      "missing_values": 0,
+      "duplicates": 0,
+      "numeric_features": 10,
+      "categorical_features": 0,
+      "total_features": 12
+    }
+  },
+  "recommendations": [
+    "Data is now ready for machine learning modeling",
+    "Consider ensemble methods due to feature diversity",
+    "Use stratified sampling due to potential class imbalance",
+    "Implement time-based cross-validation for robust evaluation",
+    "Monitor for data drift in production deployment"
+  ]
+}
