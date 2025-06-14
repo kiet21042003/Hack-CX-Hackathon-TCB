@@ -1,10 +1,11 @@
 # Large model files (exceed GitHub 100MB limit)
-model/*.joblib
-model/*_model_*.joblib
-model/best_model_*.joblib
-*.joblib
-*.pkl
-*.pickle
+# model/*.joblib
+# model/*_model_*.joblib
+model/*random_forest*
+# model/best_model_*.joblib
+# *.joblib
+# *.pkl
+# *.pickle
 
 # Data files (if large)
 /data/*.csv
