@@ -15,6 +15,9 @@ except:
     customer_data = pd.DataFrame()
     metadata = pd.DataFrame()
 
+# Global variable to store pending transfer
+pending_transfer = None
+
 def clean_product_name(product_name):
     """Remove tier information from product name"""
     if not product_name or pd.isna(product_name):
@@ -119,27 +122,25 @@ def call_text2action_api(text, message_history=None):
 
 def handle_chat_message(message, chat_history, message_history_state):
     """Handle chat message and return response"""
+    global pending_transfer
+    
     if not message.strip():
         return chat_history, "", message_history_state
     
     # Add user message to chat (using messages format)
     chat_history.append({"role": "user", "content": message})
     
-    # Call API
-    api_response = call_text2action_api(message, message_history_state)
-    
-    # Handle response based on action
-    if api_response.get("action") == "transfer_money":
-        # Handle transfer money action with simple text format (Gradio chatbot doesn't render HTML well)
-        payload = api_response.get("payload", {})
-        amount = payload.get('amount', 0)
-        recipient_account = payload.get('recipient_account', 'N/A')
-        bank_name = payload.get('bank_name', 'N/A')
-        recipient_name = payload.get('recipient_name', 'N/A')
-        memo = payload.get('memo', 'N/A')
-        
-        # Create simple text-based transfer confirmation
-        bot_response = f"""🏦 **TECHCOMBANK - XÁC NHẬN CHUYỂN TIỀN**
+    # Check if user is confirming a pending transfer
+    if message.upper().strip() in ["XÁC NHẬN", "XAC NHAN", "CONFIRM"]:
+        if 'pending_transfer' in globals() and pending_transfer:
+            # Process the transfer confirmation
+            amount = pending_transfer.get('amount', 0)
+            recipient_account = pending_transfer.get('recipient_account', 'N/A')
+            bank_name = pending_transfer.get('bank_name', 'N/A')
+            recipient_name = pending_transfer.get('recipient_name', 'N/A')
+            memo = pending_transfer.get('memo', 'N/A')
+            
+            bot_response = f"""🏦 **TECHCOMBANK - XÁC NHẬN CHUYỂN TIỀN**
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -159,6 +160,70 @@ def handle_chat_message(message, chat_history, message_history_state):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
+            
+            # Clear pending transfer
+            pending_transfer = None
+            
+            # Add bot response and return
+            chat_history.append({"role": "assistant", "content": bot_response})
+            new_message_history = message_history_state.copy() if message_history_state else []
+            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+            return chat_history, "", new_message_history
+        else:
+            bot_response = "❌ Không có giao dịch nào đang chờ xác nhận. Vui lòng thực hiện lại yêu cầu chuyển tiền."
+            chat_history.append({"role": "assistant", "content": bot_response})
+            new_message_history = message_history_state.copy() if message_history_state else []
+            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+            return chat_history, "", new_message_history
+    
+    elif message.upper().strip() in ["HỦY", "HUY", "CANCEL"]:
+        if 'pending_transfer' in globals() and pending_transfer:
+            pending_transfer = None
+            bot_response = "❌ **Giao dịch đã được hủy thành công!**\n\nQuý khách có thể thực hiện giao dịch mới bất kỳ lúc nào."
+            chat_history.append({"role": "assistant", "content": bot_response})
+            new_message_history = message_history_state.copy() if message_history_state else []
+            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+            return chat_history, "", new_message_history
+        else:
+            bot_response = "❌ Không có giao dịch nào đang chờ xác nhận để hủy."
+            chat_history.append({"role": "assistant", "content": bot_response})
+            new_message_history = message_history_state.copy() if message_history_state else []
+            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+            return chat_history, "", new_message_history
+    
+    # Call API for regular messages
+    api_response = call_text2action_api(message, message_history_state)
+    
+    # Handle response based on action
+    if api_response.get("action") == "transfer_money":
+        # Handle transfer money action - Step 1: Show confirmation request
+        payload = api_response.get("payload", {})
+        amount = payload.get('amount', 0)
+        recipient_account = payload.get('recipient_account', 'N/A')
+        bank_name = payload.get('bank_name', 'N/A')
+        recipient_name = payload.get('recipient_name', 'N/A')
+        memo = payload.get('memo', 'N/A')
+        
+        # Store transfer data globally for confirmation
+        pending_transfer = payload
+        
+        # Create transfer confirmation request
+        bot_response = f"""🔍 **XÁC NHẬN THÔNG TIN CHUYỂN TIỀN**
+
+Có phải bạn muốn chuyển tiền với nội dung dưới đây:
+
+💰 **Số tiền:** {amount:,} VND
+🏦 **Ngân hàng nhận:** {bank_name}
+📱 **Số tài khoản:** {recipient_account}
+👤 **Người nhận:** {recipient_name}
+📝 **Nội dung:** {memo}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ **Vui lòng kiểm tra kỹ thông tin trước khi xác nhận!**
+
+👉 **Để xác nhận giao dịch, vui lòng nhập: "XÁC NHẬN"**
+👉 **Để hủy giao dịch, vui lòng nhập: "HỦY"**"""
              
     else:
         # Handle regular chat response
