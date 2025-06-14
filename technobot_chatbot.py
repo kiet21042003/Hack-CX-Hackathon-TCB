@@ -278,19 +278,25 @@ def handle_paste_to_pay():
                         amount = 0
                 amount_formatted = f"{amount:,}".replace(",", ".")
                 
-                # Tạo thông tin hiển thị - PHẢI LÀ STRING
-                transfer_info = f"""💳 **XÁC NHẬN CHUYỂN TIỀN**
+                # Tạo thông tin hiển thị đơn giản cho Paste to Pay result
+                paste_result = f"📋 Đã phân tích thông tin từ clipboard: {transfer_data['bank_name']} - {transfer_data['bank_acc_number']} - {amount_formatted} VNĐ - {transfer_data['content']}"
+                
+                # Tạo thông tin xác nhận với xuống dòng
+                transfer_info = f"""💳 XÁC NHẬN CHUYỂN TIỀN
 
-🏦 **Ngân hàng:** {transfer_data['bank_name']}
-📱 **Số tài khoản:** {transfer_data['bank_acc_number']}
-💰 **Số tiền:** {amount_formatted} VNĐ
-📝 **Nội dung:** {transfer_data['content']}"""
+🏦 Ngân hàng: {transfer_data['bank_name']}
+
+📱 Số tài khoản: {transfer_data['bank_acc_number']}
+
+💰 Số tiền: {amount_formatted} VNĐ
+
+📝 Nội dung: {transfer_data['content']}"""
                 
                 global pending_transfer
                 pending_transfer = transfer_data
                 
                 return (
-                    f"📋 Đã phân tích thông tin từ clipboard:\n🏦 {transfer_data['bank_name']}\n📱 {transfer_data['bank_acc_number']}\n💰 {amount_formatted} VNĐ\n📝 {transfer_data['content']}", 
+                    paste_result, 
                     transfer_info,
                     True,
                     True,
