@@ -1,0 +1,2154 @@
+{
+  "55cb2fca-2a06-4c20-b996-9d9dac80f871": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.4466534968805241,
+      "predicted_adoption_probability": 0.4466534968805241,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.44604921215091226,
+      "predicted_adoption_probability": 0.44604921215091226,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4448537875446663,
+      "predicted_adoption_probability": 0.4448537875446663,
+      "actual_adopted": 1
+    }
+  ],
+  "aec0d92b-484d-4f8e-8fbb-1c856995452d": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4463656839361287,
+      "predicted_adoption_probability": 0.4463656839361287,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "199c7c90-4c12-4f8e-9a1e-86b14c055774",
+      "product_name": "Product_199c7c90-4c12-4f8e-9a1e-86b14c055774",
+      "product_category": "Insurance",
+      "recommendation_score": 0.1634540094714832,
+      "predicted_adoption_probability": 0.1634540094714832,
+      "actual_adopted": 0
+    }
+  ],
+  "053eb314-4483-45e3-bdc2-4982cac49fda": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.17790651185037815,
+      "predicted_adoption_probability": 0.17790651185037815,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17613624478352904,
+      "predicted_adoption_probability": 0.17613624478352904,
+      "actual_adopted": 0
+    }
+  ],
+  "fcc0bc5e-7ebe-4246-bed8-281dee7ae828": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5064893060367432,
+      "predicted_adoption_probability": 0.5064893060367432,
+      "actual_adopted": 0
+    }
+  ],
+  "d825888f-5e1f-4866-af06-c37da5e9aef0": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.43510859211681674,
+      "predicted_adoption_probability": 0.43510859211681674,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4320452201628109,
+      "predicted_adoption_probability": 0.4320452201628109,
+      "actual_adopted": 0
+    }
+  ],
+  "f0891ef7-0fe1-44fe-bb4e-b5bb5442ae97": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.28680083181653937,
+      "predicted_adoption_probability": 0.28680083181653937,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.27889873263724485,
+      "predicted_adoption_probability": 0.27889873263724485,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.27410801368334037,
+      "predicted_adoption_probability": 0.27410801368334037,
+      "actual_adopted": 0
+    }
+  ],
+  "4ab337c5-879f-464c-be1c-aa2f1d85e928": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.41773765303780064,
+      "predicted_adoption_probability": 0.41773765303780064,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.41755356012182293,
+      "predicted_adoption_probability": 0.41755356012182293,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4147359455679317,
+      "predicted_adoption_probability": 0.4147359455679317,
+      "actual_adopted": 1
+    }
+  ],
+  "f8dbebe7-cd13-405b-9c98-c28846911b09": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2916097677345743,
+      "predicted_adoption_probability": 0.2916097677345743,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.289718503282439,
+      "predicted_adoption_probability": 0.289718503282439,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2871371745051996,
+      "predicted_adoption_probability": 0.2871371745051996,
+      "actual_adopted": 1
+    }
+  ],
+  "aff3bbad-7224-4dcd-b088-008eff0d8793": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.16975124270017658,
+      "predicted_adoption_probability": 0.16975124270017658,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.1671345747671031,
+      "predicted_adoption_probability": 0.1671345747671031,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.16695115696702306,
+      "predicted_adoption_probability": 0.16695115696702306,
+      "actual_adopted": 0
+    }
+  ],
+  "d2a6cf35-c006-441c-b27d-96f13f0e6fb8": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3949104959528168,
+      "predicted_adoption_probability": 0.3949104959528168,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.39352927745832,
+      "predicted_adoption_probability": 0.39352927745832,
+      "actual_adopted": 1
+    }
+  ],
+  "0f5d58bf-987b-46d2-9590-b232105e12f9": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.40482744846866636,
+      "predicted_adoption_probability": 0.40482744846866636,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.40364673676770496,
+      "predicted_adoption_probability": 0.40364673676770496,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.39903772113999386,
+      "predicted_adoption_probability": 0.39903772113999386,
+      "actual_adopted": 0
+    }
+  ],
+  "e8d17fc5-4909-49c5-9622-b4dce1bc54a2": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.16360727774150036,
+      "predicted_adoption_probability": 0.16360727774150036,
+      "actual_adopted": 0
+    }
+  ],
+  "e598fb37-b38f-472a-8356-678d05d48218": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31784732321738585,
+      "predicted_adoption_probability": 0.31784732321738585,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.31484463334311746,
+      "predicted_adoption_probability": 0.31484463334311746,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3135821635856302,
+      "predicted_adoption_probability": 0.3135821635856302,
+      "actual_adopted": 0
+    }
+  ],
+  "057007fd-0444-4d16-b015-d4aab5526472": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.03540633439105845,
+      "predicted_adoption_probability": 0.03540633439105845,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.0353809780617546,
+      "predicted_adoption_probability": 0.0353809780617546,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.03537441981694428,
+      "predicted_adoption_probability": 0.03537441981694428,
+      "actual_adopted": 0
+    }
+  ],
+  "340c08a1-6898-47f3-b5db-b2d28c0ce769": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4407844373783173,
+      "predicted_adoption_probability": 0.4407844373783173,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "c644ac24-bb5b-4944-9209-c19a7fdef4f2",
+      "product_name": "Product_c644ac24-bb5b-4944-9209-c19a7fdef4f2",
+      "product_category": "FixedDeposit",
+      "recommendation_score": 0.1308227681488514,
+      "predicted_adoption_probability": 0.1308227681488514,
+      "actual_adopted": 0
+    }
+  ],
+  "3f7cc38d-49f3-49ba-999c-76898aea1bb3": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.16216721712983753,
+      "predicted_adoption_probability": 0.16216721712983753,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.1561737974165332,
+      "predicted_adoption_probability": 0.1561737974165332,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "424814a4-f2d6-4532-a069-6bffaf97d543",
+      "product_name": "Product_424814a4-f2d6-4532-a069-6bffaf97d543",
+      "product_category": "FixedDeposit",
+      "recommendation_score": 0.10425394664974731,
+      "predicted_adoption_probability": 0.10425394664974731,
+      "actual_adopted": 0
+    }
+  ],
+  "82b89537-3342-43c4-928a-a07809d3775f": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.17681341281100504,
+      "predicted_adoption_probability": 0.17681341281100504,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.1712743042206147,
+      "predicted_adoption_probability": 0.1712743042206147,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.16085346257065145,
+      "predicted_adoption_probability": 0.16085346257065145,
+      "actual_adopted": 0
+    }
+  ],
+  "fafc0dde-64b0-4c6e-b52c-28e0de3749d6": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.45467093690465726,
+      "predicted_adoption_probability": 0.45467093690465726,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.45396745340470773,
+      "predicted_adoption_probability": 0.45396745340470773,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4533495771216635,
+      "predicted_adoption_probability": 0.4533495771216635,
+      "actual_adopted": 0
+    }
+  ],
+  "0b0748e8-7784-4610-8558-ba1c1cf62cf5": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.40965727503295557,
+      "predicted_adoption_probability": 0.40965727503295557,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.40941039752568403,
+      "predicted_adoption_probability": 0.40941039752568403,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4072693392882324,
+      "predicted_adoption_probability": 0.4072693392882324,
+      "actual_adopted": 0
+    }
+  ],
+  "aaa068d2-72b1-47a0-afe0-90917664386c": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.2961292910877994,
+      "predicted_adoption_probability": 0.2961292910877994,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.29426691965697743,
+      "predicted_adoption_probability": 0.29426691965697743,
+      "actual_adopted": 0
+    }
+  ],
+  "1b65c5e4-bd1f-4567-9b3d-439a3610fc67": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17750536441583661,
+      "predicted_adoption_probability": 0.17750536441583661,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.1767554970759929,
+      "predicted_adoption_probability": 0.1767554970759929,
+      "actual_adopted": 0
+    }
+  ],
+  "9ce31e94-a5e4-47b3-aed9-2d0785612394": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.299617469123622,
+      "predicted_adoption_probability": 0.299617469123622,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "efb6fa38-a601-4dd8-9639-f61c3481a348",
+      "product_name": "Product_efb6fa38-a601-4dd8-9639-f61c3481a348",
+      "product_category": "CreditCard",
+      "recommendation_score": 0.12239785315013073,
+      "predicted_adoption_probability": 0.12239785315013073,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "c3b3e592-c5b2-4432-92cc-fba22b4297bc",
+      "product_name": "Product_c3b3e592-c5b2-4432-92cc-fba22b4297bc",
+      "product_category": "DebitCard",
+      "recommendation_score": 0.06974813303340721,
+      "predicted_adoption_probability": 0.06974813303340721,
+      "actual_adopted": 0
+    }
+  ],
+  "92b3f74a-604b-4bfa-bfc6-a38b14b17edd": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.32336178547552047,
+      "predicted_adoption_probability": 0.32336178547552047,
+      "actual_adopted": 0
+    }
+  ],
+  "e7feadbb-359f-4db7-b8a3-3342745b5b7e": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4314974152299174,
+      "predicted_adoption_probability": 0.4314974152299174,
+      "actual_adopted": 0
+    }
+  ],
+  "037c4244-d42e-491c-a8ac-7ac7fc7f957c": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.03488391728095902,
+      "predicted_adoption_probability": 0.03488391728095902,
+      "actual_adopted": 0
+    }
+  ],
+  "a2b60686-035e-41fc-98b8-1597717dcf29": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.19366994216209976,
+      "predicted_adoption_probability": 0.19366994216209976,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.18751925925126944,
+      "predicted_adoption_probability": 0.18751925925126944,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.18428828385986823,
+      "predicted_adoption_probability": 0.18428828385986823,
+      "actual_adopted": 0
+    }
+  ],
+  "25f52420-5520-4930-87c5-48a2ba8a8d20": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.30357148866385314,
+      "predicted_adoption_probability": 0.30357148866385314,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.30247528664430545,
+      "predicted_adoption_probability": 0.30247528664430545,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.30241554336886056,
+      "predicted_adoption_probability": 0.30241554336886056,
+      "actual_adopted": 0
+    }
+  ],
+  "03da16bb-7bbf-460e-8564-308d01174e7d": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.29800745382766475,
+      "predicted_adoption_probability": 0.29800745382766475,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.2862306134970897,
+      "predicted_adoption_probability": 0.2862306134970897,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "4d361c52-257a-4fa1-a7a5-9c571b30b94b",
+      "product_name": "Product_4d361c52-257a-4fa1-a7a5-9c571b30b94b",
+      "product_category": "FixedDeposit",
+      "recommendation_score": 0.08328670022970375,
+      "predicted_adoption_probability": 0.08328670022970375,
+      "actual_adopted": 0
+    }
+  ],
+  "0c0c5def-84a1-45f5-8211-33fc7dd27d66": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.44078524137664093,
+      "predicted_adoption_probability": 0.44078524137664093,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4376028860689421,
+      "predicted_adoption_probability": 0.4376028860689421,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.42553939581661415,
+      "predicted_adoption_probability": 0.42553939581661415,
+      "actual_adopted": 0
+    }
+  ],
+  "3b927343-3c63-4355-a61d-75db1659f8dd": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.5373958061121231,
+      "predicted_adoption_probability": 0.5373958061121231,
+      "actual_adopted": 0
+    }
+  ],
+  "f42c9caa-b3e0-48b5-a5a9-5634ee3c0545": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31642243258258035,
+      "predicted_adoption_probability": 0.31642243258258035,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.30930971504149735,
+      "predicted_adoption_probability": 0.30930971504149735,
+      "actual_adopted": 0
+    }
+  ],
+  "4ed6d985-485e-4c43-be29-75d33bb54d55": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.17684784716446703,
+      "predicted_adoption_probability": 0.17684784716446703,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.17679387467293517,
+      "predicted_adoption_probability": 0.17679387467293517,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.1756740984717474,
+      "predicted_adoption_probability": 0.1756740984717474,
+      "actual_adopted": 1
+    }
+  ],
+  "3f119511-0685-4f5d-856f-1c12c51e67ad": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5211798025952322,
+      "predicted_adoption_probability": 0.5211798025952322,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.519805280154876,
+      "predicted_adoption_probability": 0.519805280154876,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.5192455140829966,
+      "predicted_adoption_probability": 0.5192455140829966,
+      "actual_adopted": 0
+    }
+  ],
+  "0a580cec-792e-4448-a4e1-4af4ad4729ea": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.31232511155461384,
+      "predicted_adoption_probability": 0.31232511155461384,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3107949007728236,
+      "predicted_adoption_probability": 0.3107949007728236,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.30693800455348036,
+      "predicted_adoption_probability": 0.30693800455348036,
+      "actual_adopted": 0
+    }
+  ],
+  "5db9b271-0c90-4f67-8377-0b2e13fc0251": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.32342823623889444,
+      "predicted_adoption_probability": 0.32342823623889444,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.3230454241116606,
+      "predicted_adoption_probability": 0.3230454241116606,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31847217680299467,
+      "predicted_adoption_probability": 0.31847217680299467,
+      "actual_adopted": 1
+    }
+  ],
+  "d0379e9a-ccde-4b16-a49d-a2ea54fab1ab": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.2920379881273249,
+      "predicted_adoption_probability": 0.2920379881273249,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2809772011324377,
+      "predicted_adoption_probability": 0.2809772011324377,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.27960173522063286,
+      "predicted_adoption_probability": 0.27960173522063286,
+      "actual_adopted": 0
+    }
+  ],
+  "ae97fe1e-e745-41f2-a73b-89101210d9b6": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.17666847517039116,
+      "predicted_adoption_probability": 0.17666847517039116,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17579353388435168,
+      "predicted_adoption_probability": 0.17579353388435168,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17434756536583768,
+      "predicted_adoption_probability": 0.17434756536583768,
+      "actual_adopted": 0
+    }
+  ],
+  "5db81c2e-c80c-447b-a84b-d64ef1c5bbea": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.4248567577867112,
+      "predicted_adoption_probability": 0.4248567577867112,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4122696376993645,
+      "predicted_adoption_probability": 0.4122696376993645,
+      "actual_adopted": 1
+    }
+  ],
+  "e719cda1-89c9-498c-9967-c1d25bffb0e0": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4142802377900657,
+      "predicted_adoption_probability": 0.4142802377900657,
+      "actual_adopted": 0
+    }
+  ],
+  "6a51f733-a1c3-48a9-9a00-f6b0ca47e075": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.033983107597880854,
+      "predicted_adoption_probability": 0.033983107597880854,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.03398289937218986,
+      "predicted_adoption_probability": 0.03398289937218986,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.03397591678790007,
+      "predicted_adoption_probability": 0.03397591678790007,
+      "actual_adopted": 0
+    }
+  ],
+  "f82ed898-499e-4f44-813f-1d7e4d4006a9": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3014950863710575,
+      "predicted_adoption_probability": 0.3014950863710575,
+      "actual_adopted": 0
+    }
+  ],
+  "94c88ded-0e39-4d3c-b343-034ffb6fffb8": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.29452118186304094,
+      "predicted_adoption_probability": 0.29452118186304094,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2848814190313278,
+      "predicted_adoption_probability": 0.2848814190313278,
+      "actual_adopted": 0
+    }
+  ],
+  "777cb34a-6c22-4856-b92c-95010c46abc4": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.3214957990678607,
+      "predicted_adoption_probability": 0.3214957990678607,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.320029005263621,
+      "predicted_adoption_probability": 0.320029005263621,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31173664236344745,
+      "predicted_adoption_probability": 0.31173664236344745,
+      "actual_adopted": 0
+    }
+  ],
+  "2d4a71d1-c753-474c-9d4e-bc1dd4b397df": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.03478616867634564,
+      "predicted_adoption_probability": 0.03478616867634564,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "14f3a439-00b9-4c7f-ab5c-71af8d76243c",
+      "product_name": "Product_14f3a439-00b9-4c7f-ab5c-71af8d76243c",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.018709572730200488,
+      "predicted_adoption_probability": 0.018709572730200488,
+      "actual_adopted": 0
+    }
+  ],
+  "e364cc4e-0047-42e2-940c-701c43cacc3a": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.30384122772047617,
+      "predicted_adoption_probability": 0.30384122772047617,
+      "actual_adopted": 0
+    }
+  ],
+  "84ea7930-8d8a-401a-864f-a3009a7f8364": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.6341227315041282,
+      "predicted_adoption_probability": 0.6341227315041282,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.6319149145978692,
+      "predicted_adoption_probability": 0.6319149145978692,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.6276320553406464,
+      "predicted_adoption_probability": 0.6276320553406464,
+      "actual_adopted": 0
+    }
+  ],
+  "bb6f1dc3-1bd3-4651-a642-12406437d894": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.27296721954311903,
+      "predicted_adoption_probability": 0.27296721954311903,
+      "actual_adopted": 0
+    }
+  ],
+  "46276501-489d-4399-a334-bfb17a2dce7b": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.400447025562338,
+      "predicted_adoption_probability": 0.400447025562338,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3992519911755382,
+      "predicted_adoption_probability": 0.3992519911755382,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3865086616087352,
+      "predicted_adoption_probability": 0.3865086616087352,
+      "actual_adopted": 0
+    }
+  ],
+  "4ea1fce5-681e-4cc1-9bf7-ff6cf07f0488": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.4378440392889058,
+      "predicted_adoption_probability": 0.4378440392889058,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.4377360766428393,
+      "predicted_adoption_probability": 0.4377360766428393,
+      "actual_adopted": 0
+    }
+  ],
+  "1ae72202-e9b6-4638-ab16-5565644c181c": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5612292633248462,
+      "predicted_adoption_probability": 0.5612292633248462,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.5560326963922068,
+      "predicted_adoption_probability": 0.5560326963922068,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.553982722893813,
+      "predicted_adoption_probability": 0.553982722893813,
+      "actual_adopted": 0
+    }
+  ],
+  "6c3486cf-44ea-4bac-ab14-ba717f234e3f": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.433904030395885,
+      "predicted_adoption_probability": 0.433904030395885,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.4267310818931629,
+      "predicted_adoption_probability": 0.4267310818931629,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.426411136870163,
+      "predicted_adoption_probability": 0.426411136870163,
+      "actual_adopted": 0
+    }
+  ],
+  "640edeea-2a3f-4ab3-8456-18652eb00352": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.3085895091659733,
+      "predicted_adoption_probability": 0.3085895091659733,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.308308704662819,
+      "predicted_adoption_probability": 0.308308704662819,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.305735624547524,
+      "predicted_adoption_probability": 0.305735624547524,
+      "actual_adopted": 0
+    }
+  ],
+  "cefa0791-5d8c-452d-8846-3ec0a6b626e2": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.1677411781573325,
+      "predicted_adoption_probability": 0.1677411781573325,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "0ccb1964-b4da-4184-8275-43d18d26ac02",
+      "product_name": "Product_0ccb1964-b4da-4184-8275-43d18d26ac02",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.1612682362721713,
+      "predicted_adoption_probability": 0.1612682362721713,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.15998259302227769,
+      "predicted_adoption_probability": 0.15998259302227769,
+      "actual_adopted": 0
+    }
+  ],
+  "636c911c-1012-493f-9b72-f8fdac428b07": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.1758872532081273,
+      "predicted_adoption_probability": 0.1758872532081273,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.1741979098427763,
+      "predicted_adoption_probability": 0.1741979098427763,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.16616065458502308,
+      "predicted_adoption_probability": 0.16616065458502308,
+      "actual_adopted": 0
+    }
+  ],
+  "26b3bacf-f868-42cd-b38f-fad793010e45": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.5264349998082295,
+      "predicted_adoption_probability": 0.5264349998082295,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5200777437791072,
+      "predicted_adoption_probability": 0.5200777437791072,
+      "actual_adopted": 1
+    }
+  ],
+  "37cb8a4c-77a5-45da-9a21-b355884f85c9": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.18191071935141975,
+      "predicted_adoption_probability": 0.18191071935141975,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.18145849226776722,
+      "predicted_adoption_probability": 0.18145849226776722,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17989713029769355,
+      "predicted_adoption_probability": 0.17989713029769355,
+      "actual_adopted": 0
+    }
+  ],
+  "16e857ff-3647-4170-84f3-af85502dedf5": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.28749162546719964,
+      "predicted_adoption_probability": 0.28749162546719964,
+      "actual_adopted": 0
+    }
+  ],
+  "b16ef671-a60b-4b2b-a477-539cfe2a33d5": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4303238203836953,
+      "predicted_adoption_probability": 0.4303238203836953,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4267066845814751,
+      "predicted_adoption_probability": 0.4267066845814751,
+      "actual_adopted": 0
+    }
+  ],
+  "93ceb78d-24e2-426f-959a-12754fb03dc5": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.32584069359085843,
+      "predicted_adoption_probability": 0.32584069359085843,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.32508687282775195,
+      "predicted_adoption_probability": 0.32508687282775195,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.32114435450137946,
+      "predicted_adoption_probability": 0.32114435450137946,
+      "actual_adopted": 1
+    }
+  ],
+  "56fcee08-edae-4da2-9e32-989a95f43711": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.036423015020311325,
+      "predicted_adoption_probability": 0.036423015020311325,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "9811bf22-bbdd-453b-a07d-0b9dfa8bd759",
+      "product_name": "Product_9811bf22-bbdd-453b-a07d-0b9dfa8bd759",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.01994982463929132,
+      "predicted_adoption_probability": 0.01994982463929132,
+      "actual_adopted": 0
+    }
+  ],
+  "162efb6b-1934-4914-b8d0-ebf8bf01c99e": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.6776120498395344,
+      "predicted_adoption_probability": 0.6776120498395344,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.6717809033761212,
+      "predicted_adoption_probability": 0.6717809033761212,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.6507592352653624,
+      "predicted_adoption_probability": 0.6507592352653624,
+      "actual_adopted": 0
+    }
+  ],
+  "42402182-2c24-4f82-a925-62ac1771db7a": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.17566867767886804,
+      "predicted_adoption_probability": 0.17566867767886804,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.17296009148419653,
+      "predicted_adoption_probability": 0.17296009148419653,
+      "actual_adopted": 0
+    }
+  ],
+  "8fcd7e7a-a9e8-47df-8d6b-b0d09545af3b": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.28482177882985865,
+      "predicted_adoption_probability": 0.28482177882985865,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2842896004220427,
+      "predicted_adoption_probability": 0.2842896004220427,
+      "actual_adopted": 0
+    }
+  ],
+  "ad09d6f5-64c9-4211-a333-909ca6e0b6be": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3383243613361162,
+      "predicted_adoption_probability": 0.3383243613361162,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.3331209798496868,
+      "predicted_adoption_probability": 0.3331209798496868,
+      "actual_adopted": 1
+    }
+  ],
+  "7146ba58-afca-44e4-a27c-74787472dd40": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.03785163543238326,
+      "predicted_adoption_probability": 0.03785163543238326,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.0373609337128324,
+      "predicted_adoption_probability": 0.0373609337128324,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.03736043562331883,
+      "predicted_adoption_probability": 0.03736043562331883,
+      "actual_adopted": 0
+    }
+  ],
+  "e8b72837-1e65-4efe-9656-6b4511641535": [
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.46950882450557235,
+      "predicted_adoption_probability": 0.46950882450557235,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.45028448029040546,
+      "predicted_adoption_probability": 0.45028448029040546,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "847768e2-d6ab-48e6-90cf-08777b702f70",
+      "product_name": "Product_847768e2-d6ab-48e6-90cf-08777b702f70",
+      "product_category": "DebitCard",
+      "recommendation_score": 0.23428661369533377,
+      "predicted_adoption_probability": 0.23428661369533377,
+      "actual_adopted": 0
+    }
+  ],
+  "6653cc06-8cbc-4ead-bd26-c8260a771550": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.17525936211381724,
+      "predicted_adoption_probability": 0.17525936211381724,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17503885471847008,
+      "predicted_adoption_probability": 0.17503885471847008,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17168546879162228,
+      "predicted_adoption_probability": 0.17168546879162228,
+      "actual_adopted": 0
+    }
+  ],
+  "330c8ff2-9eac-419a-b5f0-9ab513cf3bb8": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.14604032701122305,
+      "predicted_adoption_probability": 0.14604032701122305,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "f16529d1-9da3-46a2-ab77-485a20b5b19d",
+      "product_name": "Product_f16529d1-9da3-46a2-ab77-485a20b5b19d",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.0911476419373586,
+      "predicted_adoption_probability": 0.0911476419373586,
+      "actual_adopted": 0
+    }
+  ],
+  "058a70a4-5016-47b9-9335-82b63eae3fac": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.03525275820281415,
+      "predicted_adoption_probability": 0.03525275820281415,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.03525254375484451,
+      "predicted_adoption_probability": 0.03525254375484451,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.035252119097001815,
+      "predicted_adoption_probability": 0.035252119097001815,
+      "actual_adopted": 0
+    }
+  ],
+  "2c4673cb-9da1-4986-a2f1-a69ba72ef28c": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.2942012776073702,
+      "predicted_adoption_probability": 0.2942012776073702,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.29300177604764877,
+      "predicted_adoption_probability": 0.29300177604764877,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.2904894111993525,
+      "predicted_adoption_probability": 0.2904894111993525,
+      "actual_adopted": 0
+    }
+  ],
+  "2ebc9bf7-ea4a-4dfe-b787-004d1c1f9a11": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.3287540493139731,
+      "predicted_adoption_probability": 0.3287540493139731,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.32860948177984983,
+      "predicted_adoption_probability": 0.32860948177984983,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.32192264637361545,
+      "predicted_adoption_probability": 0.32192264637361545,
+      "actual_adopted": 0
+    }
+  ],
+  "912d1418-3330-4239-84a9-6989b3d6f232": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3114265384453827,
+      "predicted_adoption_probability": 0.3114265384453827,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3055192491277551,
+      "predicted_adoption_probability": 0.3055192491277551,
+      "actual_adopted": 0
+    }
+  ],
+  "38f21e07-aa1f-4fca-b575-b88b217e4c7b": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.5429814493953256,
+      "predicted_adoption_probability": 0.5429814493953256,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5423976428771575,
+      "predicted_adoption_probability": 0.5423976428771575,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5403048875154498,
+      "predicted_adoption_probability": 0.5403048875154498,
+      "actual_adopted": 1
+    }
+  ],
+  "88606a72-d2f2-4ec6-9b16-4280855a9604": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.2801038903564178,
+      "predicted_adoption_probability": 0.2801038903564178,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.2774782952426931,
+      "predicted_adoption_probability": 0.2774782952426931,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.2744868142937837,
+      "predicted_adoption_probability": 0.2744868142937837,
+      "actual_adopted": 0
+    }
+  ],
+  "c32e2348-97c9-4174-8960-57008a47f7dd": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.3090689783394958,
+      "predicted_adoption_probability": 0.3090689783394958,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.3017671930869894,
+      "predicted_adoption_probability": 0.3017671930869894,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.2987731482193766,
+      "predicted_adoption_probability": 0.2987731482193766,
+      "actual_adopted": 0
+    }
+  ],
+  "69a45a4d-b648-440f-9317-7ff89212af57": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.32589005571867286,
+      "predicted_adoption_probability": 0.32589005571867286,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.32030996141178764,
+      "predicted_adoption_probability": 0.32030996141178764,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.31805160048137693,
+      "predicted_adoption_probability": 0.31805160048137693,
+      "actual_adopted": 0
+    }
+  ],
+  "d7901806-dca2-4ca5-a982-879e074dceef": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.41922904348318313,
+      "predicted_adoption_probability": 0.41922904348318313,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.40982908216647534,
+      "predicted_adoption_probability": 0.40982908216647534,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.403096585494989,
+      "predicted_adoption_probability": 0.403096585494989,
+      "actual_adopted": 0
+    }
+  ],
+  "39c3d2a7-9c26-4663-a302-3ad03d45d128": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.17370503034396056,
+      "predicted_adoption_probability": 0.17370503034396056,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.16992790009366737,
+      "predicted_adoption_probability": 0.16992790009366737,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "4cec432b-2869-431d-a383-9a25192e17fd",
+      "product_name": "Product_4cec432b-2869-431d-a383-9a25192e17fd",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.0896981931959281,
+      "predicted_adoption_probability": 0.0896981931959281,
+      "actual_adopted": 0
+    }
+  ],
+  "64ccba77-dd27-4c47-a6dd-b4a04de0a6de": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17354257782028448,
+      "predicted_adoption_probability": 0.17354257782028448,
+      "actual_adopted": 0
+    }
+  ],
+  "9db68952-c9cd-4ed3-97db-d33dd450e6ab": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.39554660807051845,
+      "predicted_adoption_probability": 0.39554660807051845,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3900861157406471,
+      "predicted_adoption_probability": 0.3900861157406471,
+      "actual_adopted": 1
+    }
+  ],
+  "482e1117-57a9-4a51-a8a2-d152152a5979": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.16724579298708353,
+      "predicted_adoption_probability": 0.16724579298708353,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.16661978313123768,
+      "predicted_adoption_probability": 0.16661978313123768,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.16647845481658097,
+      "predicted_adoption_probability": 0.16647845481658097,
+      "actual_adopted": 0
+    }
+  ],
+  "d149fbb7-b910-4c23-80cf-32919d980ee6": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.1795188063022548,
+      "predicted_adoption_probability": 0.1795188063022548,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17755777269325881,
+      "predicted_adoption_probability": 0.17755777269325881,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.16778581070785648,
+      "predicted_adoption_probability": 0.16778581070785648,
+      "actual_adopted": 0
+    }
+  ],
+  "1894d019-172e-4aa6-9308-3b7c1efdf2f7": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.5403937805494812,
+      "predicted_adoption_probability": 0.5403937805494812,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.5397710320743769,
+      "predicted_adoption_probability": 0.5397710320743769,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.5379481695082237,
+      "predicted_adoption_probability": 0.5379481695082237,
+      "actual_adopted": 1
+    }
+  ],
+  "f2fb6764-5ff6-4d9c-999d-0d475313961d": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.17349840881834958,
+      "predicted_adoption_probability": 0.17349840881834958,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17011171958885063,
+      "predicted_adoption_probability": 0.17011171958885063,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.1697337741389701,
+      "predicted_adoption_probability": 0.1697337741389701,
+      "actual_adopted": 0
+    }
+  ],
+  "75c2fa27-2694-4175-aaee-1a92e06d0848": [
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.3953335434441206,
+      "predicted_adoption_probability": 0.3953335434441206,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.38943575000841857,
+      "predicted_adoption_probability": 0.38943575000841857,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3880925610580164,
+      "predicted_adoption_probability": 0.3880925610580164,
+      "actual_adopted": 1
+    }
+  ],
+  "ea1abe2a-d9ea-43f4-a9b2-79eddea6e09d": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.44102217253390563,
+      "predicted_adoption_probability": 0.44102217253390563,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "8990d946-6e9f-4b57-875d-feac56b6be5a",
+      "product_name": "Product_8990d946-6e9f-4b57-875d-feac56b6be5a",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.4395826091617494,
+      "predicted_adoption_probability": 0.4395826091617494,
+      "actual_adopted": 1
+    }
+  ],
+  "78ba86dd-4a22-4095-8978-839f0da8c4d2": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.42404493200495214,
+      "predicted_adoption_probability": 0.42404493200495214,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.4139822546763022,
+      "predicted_adoption_probability": 0.4139822546763022,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4126292590165263,
+      "predicted_adoption_probability": 0.4126292590165263,
+      "actual_adopted": 0
+    }
+  ],
+  "2097ee08-9dbe-452e-be03-390593a3445d": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.5497123783509961,
+      "predicted_adoption_probability": 0.5497123783509961,
+      "actual_adopted": 0
+    }
+  ],
+  "0653d3a2-f454-4451-b1d7-14be641e1ecb": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.4097392102852138,
+      "predicted_adoption_probability": 0.4097392102852138,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.405732152504874,
+      "predicted_adoption_probability": 0.405732152504874,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.40388058710566005,
+      "predicted_adoption_probability": 0.40388058710566005,
+      "actual_adopted": 0
+    }
+  ],
+  "be14187e-f1b8-4b7e-abeb-a7779bd879bc": [
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.41574501728694196,
+      "predicted_adoption_probability": 0.41574501728694196,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.414129833689275,
+      "predicted_adoption_probability": 0.414129833689275,
+      "actual_adopted": 0
+    }
+  ],
+  "9186accf-f968-456b-b7f7-b8fc61746747": [
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.31564022612717285,
+      "predicted_adoption_probability": 0.31564022612717285,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31289942263629306,
+      "predicted_adoption_probability": 0.31289942263629306,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.31150968859122796,
+      "predicted_adoption_probability": 0.31150968859122796,
+      "actual_adopted": 1
+    }
+  ],
+  "c54d9fe2-72a6-4e8d-a418-3d4a350a927e": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.29345935588418615,
+      "predicted_adoption_probability": 0.29345935588418615,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.28860570213706327,
+      "predicted_adoption_probability": 0.28860570213706327,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.28117034742438624,
+      "predicted_adoption_probability": 0.28117034742438624,
+      "actual_adopted": 1
+    }
+  ],
+  "27507786-8d34-4274-9bb4-21ec7927f4e9": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.17580431073520897,
+      "predicted_adoption_probability": 0.17580431073520897,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.17075430737234915,
+      "predicted_adoption_probability": 0.17075430737234915,
+      "actual_adopted": 0
+    }
+  ],
+  "67d57688-cc62-4141-8775-9dc98834fea8": [
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.3782304932744549,
+      "predicted_adoption_probability": 0.3782304932744549,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "abb503cf-abb3-4dc8-a75d-5a4d885a0331",
+      "product_name": "Product_abb503cf-abb3-4dc8-a75d-5a4d885a0331",
+      "product_category": "FixedDeposit",
+      "recommendation_score": 0.22260115990544257,
+      "predicted_adoption_probability": 0.22260115990544257,
+      "actual_adopted": 0
+    }
+  ],
+  "f1289ab3-5226-4cbc-aa8d-2b7145641d52": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.29956751422380457,
+      "predicted_adoption_probability": 0.29956751422380457,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.2961453331655235,
+      "predicted_adoption_probability": 0.2961453331655235,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_name": "Product_5c28ab1e-bb10-4348-b3ab-c8a4dfa4f0e2",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.2821662768818991,
+      "predicted_adoption_probability": 0.2821662768818991,
+      "actual_adopted": 0
+    }
+  ],
+  "987018f2-c7bf-4453-8727-20afcb7c0e38": [
+    {
+      "product_id": "f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_name": "Product_f6af27e7-2dff-428f-8819-161da45655e8",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.32650036038324637,
+      "predicted_adoption_probability": 0.32650036038324637,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_name": "Product_ec0c4e1e-d0b3-414b-b8ae-dd8429ff1214",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.3256495406749313,
+      "predicted_adoption_probability": 0.3256495406749313,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.3115794866700522,
+      "predicted_adoption_probability": 0.3115794866700522,
+      "actual_adopted": 1
+    }
+  ],
+  "6c414fa7-1161-4b6a-ba44-5e5e52e93a0e": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.4348332159900492,
+      "predicted_adoption_probability": 0.4348332159900492,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_name": "Product_565789b8-029d-45e1-9c31-63034c6d277a",
+      "product_category": "PersonalLoan",
+      "recommendation_score": 0.43407989214078835,
+      "predicted_adoption_probability": 0.43407989214078835,
+      "actual_adopted": 0
+    }
+  ],
+  "17c8307d-b60c-4c81-8fe8-e3d578603f2f": [
+    {
+      "product_id": "ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_name": "Product_ce07d04c-b6e7-449d-a1ab-f13267ac7cf1",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.03383159865338083,
+      "predicted_adoption_probability": 0.03383159865338083,
+      "actual_adopted": 0
+    }
+  ],
+  "3ed3fa0b-4a98-49d5-a321-c0c578d87de9": [
+    {
+      "product_id": "b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_name": "Product_b8fb9bd0-c89f-4963-8abc-0c38d8b31e57",
+      "product_category": "FXTransfer",
+      "recommendation_score": 0.5481156158066915,
+      "predicted_adoption_probability": 0.5481156158066915,
+      "actual_adopted": 1
+    },
+    {
+      "product_id": "3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_name": "Product_3f19d078-4239-49a9-a77b-c389f421670e",
+      "product_category": "Mortgage",
+      "recommendation_score": 0.5466751428844223,
+      "predicted_adoption_probability": 0.5466751428844223,
+      "actual_adopted": 0
+    },
+    {
+      "product_id": "e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_name": "Product_e0d289ba-6f94-47f6-a2b2-ecdaa0de0535",
+      "product_category": "Overdraft",
+      "recommendation_score": 0.541446174206629,
+      "predicted_adoption_probability": 0.541446174206629,
+      "actual_adopted": 1
+    }
+  ],
+  "499b4c79-eab5-4ec3-bc83-0466f52c95a2": [
+    {
+      "product_id": "69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_name": "Product_69702bb0-34ca-4850-8d38-3d3c261d063e",
+      "product_category": "SavingsAccount",
+      "recommendation_score": 0.1459155958925184,
+      "predicted_adoption_probability": 0.1459155958925184,
+      "actual_adopted": 0
+    }
+  ]
+}
