@@ -168,13 +168,13 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
             chat_history.append({"role": "assistant", "content": bot_response})
             new_message_history = message_history_state.copy() if message_history_state else []
             new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history
+            return chat_history, "", new_message_history, False, None
         else:
             bot_response = "❌ Không có giao dịch nào đang chờ xác nhận. Vui lòng thực hiện lại yêu cầu chuyển tiền."
             chat_history.append({"role": "assistant", "content": bot_response})
             new_message_history = message_history_state.copy() if message_history_state else []
             new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history
+            return chat_history, "", new_message_history, False, None
     
     elif message.upper().strip() in ["HỦY", "HUY", "CANCEL"]:
         if 'pending_transfer' in globals() and pending_transfer:
@@ -183,47 +183,35 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
             chat_history.append({"role": "assistant", "content": bot_response})
             new_message_history = message_history_state.copy() if message_history_state else []
             new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history
+            return chat_history, "", new_message_history, False, None
         else:
             bot_response = "❌ Không có giao dịch nào đang chờ xác nhận để hủy."
             chat_history.append({"role": "assistant", "content": bot_response})
             new_message_history = message_history_state.copy() if message_history_state else []
             new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history
+            return chat_history, "", new_message_history, False, None
     
     # Call API for regular messages
     api_response = call_text2action_api(message, message_history_state)
     
     # Handle response based on action
     if api_response.get("action") == "transfer_money":
-        # Handle transfer money action - Step 1: Show confirmation request
+        # Handle transfer money action - Trigger popup modal
         payload = api_response.get("payload", {})
-        amount = payload.get('amount', 0)
-        recipient_account = payload.get('recipient_account', 'N/A')
-        bank_name = payload.get('bank_name', 'N/A')
-        recipient_name = payload.get('recipient_name', 'N/A')
-        memo = payload.get('memo', 'N/A')
         
         # Store transfer data globally for confirmation
         pending_transfer = payload
         
-        # Create transfer confirmation request
-        bot_response = f"""🔍 **XÁC NHẬN THÔNG TIN CHUYỂN TIỀN**
-
-Có phải bạn muốn chuyển tiền với nội dung dưới đây:
-
-💰 **Số tiền:** {amount:,} VND
-🏦 **Ngân hàng nhận:** {bank_name}
-📱 **Số tài khoản:** {recipient_account}
-👤 **Người nhận:** {recipient_name}
-📝 **Nội dung:** {memo}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-⚠️ **Vui lòng kiểm tra kỹ thông tin trước khi xác nhận!**
-
-👉 **Để xác nhận giao dịch, vui lòng nhập: "XÁC NHẬN"**
-👉 **Để hủy giao dịch, vui lòng nhập: "HỦY"**"""
+        # Return a simple message and trigger popup via return values
+        bot_response = "🔄 Đang chuẩn bị thông tin chuyển tiền..."
+        
+        # Add bot response to chat and return with popup trigger
+        chat_history.append({"role": "assistant", "content": bot_response})
+        new_message_history = message_history_state.copy() if message_history_state else []
+        new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+        
+        # Return with popup trigger (True for popup, payload for data)
+        return chat_history, "", new_message_history, True, payload
              
     else:
         # Handle regular chat response
@@ -236,7 +224,8 @@ Có phải bạn muốn chuyển tiền với nội dung dưới đây:
     new_message_history = message_history_state.copy() if message_history_state else []
     new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
     
-    return chat_history, "", new_message_history
+    # Return without popup trigger
+    return chat_history, "", new_message_history, False, None
 
 def product_button_click(product_name):
     """Handle product button click"""
@@ -468,6 +457,117 @@ with gr.Blocks(css=css, title="TECHNOBOT - Hệ thống Phân tích Tín dụng 
                 )
                 send_btn = gr.Button("Gửi", variant="primary", scale=1)
     
+    # Transfer Confirmation Modal (Hidden by default)
+    with gr.Row(visible=False) as transfer_modal:
+        with gr.Column():
+            gr.HTML("<h2 style='color: #E30613; text-align: center;'>🏦 XÁC NHẬN CHUYỂN TIỀN</h2>")
+            
+            transfer_info = gr.HTML("")
+            
+            with gr.Row():
+                confirm_btn = gr.Button("✅ Xác nhận chuyển tiền", variant="primary", size="lg")
+                cancel_btn = gr.Button("❌ Hủy giao dịch", variant="secondary", size="lg")
+    
+    # Hidden states for popup
+    popup_trigger = gr.State(False)
+    transfer_data = gr.State(None)
+    
+    # Transfer popup functions
+    def show_transfer_popup(payload):
+        """Show transfer confirmation popup"""
+        if not payload:
+            return gr.update(visible=False), ""
+        
+        amount = payload.get('amount', 0)
+        recipient_account = payload.get('recipient_account', 'N/A')
+        bank_name = payload.get('bank_name', 'N/A')
+        recipient_name = payload.get('recipient_name', 'N/A')
+        memo = payload.get('memo', 'N/A')
+        
+        info_html = f"""
+        <div style="background: #2d2d2d; padding: 20px; border-radius: 12px; border: 1px solid #404040; margin: 10px 0;">
+            <h3 style="color: #E30613; text-align: center; margin-bottom: 20px;">Có phải bạn muốn chuyển tiền với nội dung dưới đây:</h3>
+            
+            <div style="background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">💰 Số tiền:</span>
+                    <strong style="color: #ffffff; font-size: 18px;">{amount:,} VND</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">🏦 Ngân hàng nhận:</span>
+                    <span style="color: #ffffff;">{bank_name}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">📱 Số tài khoản:</span>
+                    <span style="color: #ffffff; font-family: monospace;">{recipient_account}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">👤 Người nhận:</span>
+                    <span style="color: #ffffff;">{recipient_name}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">📝 Nội dung:</span>
+                    <span style="color: #ffffff;">{memo}</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #ffcccc; font-size: 14px;">⚠️ Vui lòng kiểm tra kỹ thông tin trước khi xác nhận!</p>
+            </div>
+        </div>
+        """
+        
+        return gr.update(visible=True), info_html
+    
+    def confirm_transfer(transfer_data_state):
+        """Confirm transfer and show success message"""
+        global pending_transfer
+        
+        if not transfer_data_state:
+            return gr.update(visible=False), "", []
+        
+        amount = transfer_data_state.get('amount', 0)
+        recipient_account = transfer_data_state.get('recipient_account', 'N/A')
+        bank_name = transfer_data_state.get('bank_name', 'N/A')
+        recipient_name = transfer_data_state.get('recipient_name', 'N/A')
+        memo = transfer_data_state.get('memo', 'N/A')
+        
+        success_message = f"""🏦 **TECHCOMBANK - XÁC NHẬN CHUYỂN TIỀN**
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 **Số tiền:** {amount:,} VND
+🏦 **Ngân hàng nhận:** {bank_name}
+📱 **Số tài khoản:** {recipient_account}
+👤 **Người nhận:** {recipient_name}
+📝 **Nội dung:** {memo}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ **GIAO DỊCH ĐÃ ĐƯỢC THỰC HIỆN THÀNH CÔNG!**
+
+🔢 **Mã giao dịch:** TCB{amount}{recipient_account[-4:]}
+⏰ **Thời gian:** {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
+        
+        # Clear pending transfer
+        pending_transfer = None
+        
+        # Return: hide modal, empty transfer info, add success message to chat
+        return gr.update(visible=False), "", [{"role": "assistant", "content": success_message}]
+    
+    def cancel_transfer():
+        """Cancel transfer and hide popup"""
+        global pending_transfer
+        pending_transfer = None
+        
+        cancel_message = "❌ **Giao dịch đã được hủy thành công!**\n\nQuý khách có thể thực hiện giao dịch mới bất kỳ lúc nào."
+        
+        return gr.update(visible=False), "", [{"role": "assistant", "content": cancel_message}]
+
     # Event handlers
     def update_profile_and_buttons(customer_id):
         if not customer_id:
@@ -517,20 +617,55 @@ with gr.Blocks(css=css, title="TECHNOBOT - Hệ thống Phân tích Tín dụng 
         outputs=[chatbot, chat_input, message_history_state]
     )
     
-    # Chat functionality
+    # Chat functionality with popup handling
     def send_message(message, chat_history, message_history):
-        return handle_chat_message(message, chat_history, message_history)
+        result = handle_chat_message(message, chat_history, message_history)
+        
+        if len(result) == 5:  # Transfer money case
+            chat_hist, input_clear, msg_hist, show_popup, payload = result
+            if show_popup and payload:
+                # Show popup and store transfer data
+                modal_visible, transfer_html = show_transfer_popup(payload)
+                return chat_hist, input_clear, msg_hist, modal_visible, transfer_html, payload
+            else:
+                return chat_hist, input_clear, msg_hist, gr.update(visible=False), "", None
+        else:  # Regular case
+            chat_hist, input_clear, msg_hist = result
+            return chat_hist, input_clear, msg_hist, gr.update(visible=False), "", None
     
     send_btn.click(
         send_message,
         inputs=[chat_input, chatbot, message_history_state],
-        outputs=[chatbot, chat_input, message_history_state]
+        outputs=[chatbot, chat_input, message_history_state, transfer_modal, transfer_info, transfer_data]
     )
     
     chat_input.submit(
         send_message,
         inputs=[chat_input, chatbot, message_history_state],
-        outputs=[chatbot, chat_input, message_history_state]
+        outputs=[chatbot, chat_input, message_history_state, transfer_modal, transfer_info, transfer_data]
+    )
+    
+    # Transfer popup event handlers
+    def handle_confirm(data, chat_hist):
+        modal_update, info_update, new_messages = confirm_transfer(data)
+        updated_chat = chat_hist + new_messages
+        return modal_update, info_update, updated_chat
+    
+    def handle_cancel(chat_hist):
+        modal_update, info_update, new_messages = cancel_transfer()
+        updated_chat = chat_hist + new_messages
+        return modal_update, info_update, updated_chat
+    
+    confirm_btn.click(
+        handle_confirm,
+        inputs=[transfer_data, chatbot],
+        outputs=[transfer_modal, transfer_info, chatbot]
+    )
+    
+    cancel_btn.click(
+        handle_cancel,
+        inputs=[chatbot],
+        outputs=[transfer_modal, transfer_info, chatbot]
     )
 
 # Launch the app
