@@ -5,6 +5,10 @@ import json
 import random
 from datetime import datetime
 import webbrowser
+import pyperclip  # For clipboard access
+import socket
+import time
+from typing import List, Tuple, Dict, Any, Optional
 
 # Load customer data
 try:
@@ -76,176 +80,271 @@ def get_customer_profile(user_id):
     
     return profile_html, product1, product2, product3
 
-def call_text2action_api(text, message_history=None):
-    """Call the text2action API"""
-    try:
-        # Try the correct API URL
-        urls = [
-            "http://54.87.106.218/api/text2action",
-            "https://54.87.106.218/api/text2action"
-        ]
-        
-        for url in urls:
-            try:
-                headers = {
-                    'accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-                
-                data = {"text": text}
-                if message_history:
-                    data["message_history"] = message_history
-                    
-                response = requests.post(url, headers=headers, json=data, timeout=10)
-                
-                if response.status_code == 200:
-                    return response.json()
-                else:
-                    continue  # Try next URL
-            except:
-                continue  # Try next URL
-        
-        # If all URLs failed
-        return {
-            "action": "ask",
-            "payload": {
-                "answer": "Xin lỗi, không thể kết nối đến server API. Đây có thể là demo offline - bạn có thể thử các tính năng khác của TECHNOBOT!"
-            }
-        }
-    except Exception as e:
-        return {
-            "action": "ask",
-            "payload": {
-                "answer": f"Xin lỗi, có lỗi xảy ra: {str(e)}. Đây có thể là demo offline - bạn có thể thử các tính năng khác của TECHNOBOT!"
-            }
-        }
-
-def handle_chat_message(message, chat_history, message_history_state):
-    """Handle chat message and return response"""
-    global pending_transfer
-    
+def chat_with_technobot(message, history, message_history):
+    """Xử lý chat với TECHNOBOT"""
     if not message.strip():
-        return chat_history, "", message_history_state
+        return history, "", message_history
     
-    # Add user message to chat (using messages format)
-    chat_history.append({"role": "user", "content": message})
-    
-    # Check if user is confirming a pending transfer
-    if message.upper().strip() in ["XÁC NHẬN", "XAC NHAN", "CONFIRM"]:
-        if 'pending_transfer' in globals() and pending_transfer:
-            # Process the transfer confirmation
-            amount = pending_transfer.get('amount', 0)
-            recipient_account = pending_transfer.get('recipient_account', 'N/A')
-            bank_name = pending_transfer.get('bank_name', 'N/A')
-            recipient_name = pending_transfer.get('recipient_name', 'N/A')
-            memo = pending_transfer.get('memo', 'N/A')
+    try:
+        # API endpoint
+        api_url = "http://54.87.106.218/api/text2action"
+        
+        # Chuẩn bị payload - chỉ gửi message_history nếu có
+        payload = {"text": message}
+        
+        if message_history:
+            # Format message history cho API
+            formatted_history = []
+            for msg_pair in message_history:
+                if isinstance(msg_pair, list) and len(msg_pair) == 2:
+                    user_msg, bot_msg = msg_pair
+                    formatted_history.append(f"User: {user_msg}")
+                    formatted_history.append(f"Assistant: {bot_msg}")
             
-            bot_response = f"""🏦 **TECHCOMBANK - XÁC NHẬN CHUYỂN TIỀN**
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-💰 **Số tiền:** {amount:,} VND
-🏦 **Ngân hàng nhận:** {bank_name}
-📱 **Số tài khoản:** {recipient_account}
-👤 **Người nhận:** {recipient_name}
-📝 **Nội dung:** {memo}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-✅ **GIAO DỊCH ĐÃ ĐƯỢC THỰC HIỆN THÀNH CÔNG!**
-
-🔢 **Mã giao dịch:** TCB{amount}{recipient_account[-4:]}
-⏰ **Thời gian:** {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
-            
-            # Clear pending transfer
-            pending_transfer = None
-            
-            # Add bot response and return
-            chat_history.append({"role": "assistant", "content": bot_response})
-            new_message_history = message_history_state.copy() if message_history_state else []
-            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history, False, None
+            if formatted_history:
+                payload["message_history"] = formatted_history
+        
+        # Debug logging
+        print(f"🔍 DEBUG: API URL = {api_url}")
+        print(f"🔍 DEBUG: Payload = {payload}")
+        
+        # Headers giống như curl
+        headers = {
+            'accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+        print(f"🔍 DEBUG: Headers = {headers}")
+        
+        # Gọi API
+        print("🔍 DEBUG: Đang gọi API...")
+        response = requests.post(api_url, json=payload, headers=headers, timeout=15)
+        
+        print(f"🔍 DEBUG: Response status = {response.status_code}")
+        print(f"🔍 DEBUG: Response headers = {dict(response.headers)}")
+        
+        if response.status_code == 200:
+            result = response.json()
+            print(f"🔍 DEBUG: Response JSON = {result}")
         else:
-            bot_response = "❌ Không có giao dịch nào đang chờ xác nhận. Vui lòng thực hiện lại yêu cầu chuyển tiền."
-            chat_history.append({"role": "assistant", "content": bot_response})
-            new_message_history = message_history_state.copy() if message_history_state else []
-            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history, False, None
+            print(f"🔍 DEBUG: Response text = {response.text}")
+            # API error - use mock response
+            result = get_mock_response(message, bool(message_history))
+            print(f"🔍 DEBUG: Using mock response = {result}")
+        
+    except Exception as e:
+        # Connection error - use mock response
+        print(f"🔍 DEBUG: Exception occurred = {type(e).__name__}: {str(e)}")
+        print(f"🔍 DEBUG: Using mock response due to exception")
+        result = get_mock_response(message, bool(message_history))
     
-    elif message.upper().strip() in ["HỦY", "HUY", "CANCEL"]:
-        if 'pending_transfer' in globals() and pending_transfer:
-            pending_transfer = None
-            bot_response = "❌ **Giao dịch đã được hủy thành công!**\n\nQuý khách có thể thực hiện giao dịch mới bất kỳ lúc nào."
-            chat_history.append({"role": "assistant", "content": bot_response})
-            new_message_history = message_history_state.copy() if message_history_state else []
-            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history, False, None
-        else:
-            bot_response = "❌ Không có giao dịch nào đang chờ xác nhận để hủy."
-            chat_history.append({"role": "assistant", "content": bot_response})
-            new_message_history = message_history_state.copy() if message_history_state else []
-            new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-            return chat_history, "", new_message_history, False, None
+    # Process result
+    action = result.get("action", "ask")
+    print(f"🔍 DEBUG: Action = {action}")
     
-    # Call API for regular messages
-    api_response = call_text2action_api(message, message_history_state)
+    if action == "ask":
+        payload_data = result.get("payload", {})
+        response_text = payload_data.get("answer", "Xin lỗi, tôi không hiểu câu hỏi của bạn.")
+        print(f"🔍 DEBUG: Response text = {response_text[:100]}...")
+        new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": response_text}]
+        message_history.append([message, response_text])
+        return new_history, "", message_history, gr.update(value=""), gr.update(visible=False)
     
-    # Handle response based on action
-    if api_response.get("action") == "transfer_money":
-        # Handle transfer money action - Trigger popup modal
-        payload = api_response.get("payload", {})
+    elif action == "transfer_money":
+        global pending_transfer
+        payload_data = result.get("payload", {})
+        pending_transfer = payload_data
         
-        # Store transfer data globally for confirmation
-        pending_transfer = payload
+        response_text = "🔄 Đang chuẩn bị thông tin chuyển tiền... (Demo mode)"
+        new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": response_text}]
+        message_history.append([message, response_text])
         
-        # Return a simple message and trigger popup via return values
-        bot_response = "🔄 Đang chuẩn bị thông tin chuyển tiền..."
+        # Tạo HTML cho transfer info
+        amount = payload_data.get("amount", 0)
+        recipient_account = payload_data.get("recipient_account", "N/A")
+        bank_name = payload_data.get("bank_name", "N/A")
+        recipient_name = payload_data.get("recipient_name", "N/A")
+        memo = payload_data.get("memo", "N/A")
         
-        # Add bot response to chat and return with popup trigger
-        chat_history.append({"role": "assistant", "content": bot_response})
-        new_message_history = message_history_state.copy() if message_history_state else []
-        new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
+        info_html = f"""
+        <div style="background: #2d2d2d; padding: 20px; border-radius: 12px; border: 1px solid #404040; margin: 10px 0;">
+            <h3 style="color: #E30613; text-align: center; margin-bottom: 20px;">Có phải bạn muốn chuyển tiền với nội dung dưới đây: (Demo Mode)</h3>
+            
+            <div style="background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">💰 Số tiền:</span>
+                    <strong style="color: #ffffff; font-size: 18px;">{amount:,} VND</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">🏦 Ngân hàng nhận:</span>
+                    <span style="color: #ffffff;">{bank_name}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">📱 Số tài khoản:</span>
+                    <span style="color: #ffffff; font-family: monospace;">{recipient_account}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">👤 Người nhận:</span>
+                    <span style="color: #ffffff;">{recipient_name}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="color: #cccccc;">📝 Nội dung:</span>
+                    <span style="color: #ffffff;">{memo}</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #ffcccc; font-size: 14px;">⚠️ Đây là demo mode - API thực tế không khả dụng</p>
+            </div>
+        </div>
+        """
         
-        # Return with popup trigger (True for popup, payload for data)
-        return chat_history, "", new_message_history, True, payload
-             
+        return new_history, "", message_history, gr.update(value=info_html), gr.update(visible=True)
+    
     else:
-        # Handle regular chat response
-        bot_response = api_response.get("payload", {}).get("answer", "Xin lỗi, tôi không hiểu câu hỏi của bạn.")
-    
-    # Add bot response to chat (using messages format)
-    chat_history.append({"role": "assistant", "content": bot_response})
-    
-    # Update message history for next API call
-    new_message_history = message_history_state.copy() if message_history_state else []
-    new_message_history.extend([f"User: {message}", f"Assistant: {bot_response}"])
-    
-    # Return without popup trigger
-    return chat_history, "", new_message_history, False, None
+        error_msg = "Xin lỗi, có lỗi xảy ra trong quá trình xử lý."
+        new_history = history + [{"role": "user", "content": message}, {"role": "assistant", "content": error_msg}]
+        message_history.append([message, error_msg])
+        return new_history, "", message_history, gr.update(value=""), gr.update(visible=False)
 
 def product_button_click(product_name):
-    """Handle product button click"""
+    """Xử lý khi click vào nút sản phẩm"""
     if not product_name:
         return [], "", []
     
+    # Tạo tin nhắn ban đầu
     initial_message = f"Tôi quan tâm đến sản phẩm {product_name}"
     
-    # Call API for initial product inquiry
-    api_response = call_text2action_api(initial_message)
-    bot_response = api_response.get("payload", {}).get("answer", f"Cảm ơn bạn đã quan tâm đến sản phẩm {product_name}!")
+    # Gọi API để lấy thông tin sản phẩm
+    try:
+        result = chat_with_technobot(initial_message, [], [])
+        if len(result) >= 3:
+            new_history, _, new_msg_history = result[:3]
+            return new_history, "", new_msg_history
+        else:
+            # Fallback nếu API không hoạt động
+            response = f"Cảm ơn bạn đã quan tâm đến sản phẩm {product_name}! Đây là một sản phẩm tuyệt vời của Techcombank."
+            chat_history = [
+                {"role": "user", "content": initial_message},
+                {"role": "assistant", "content": response}
+            ]
+            message_history = [[initial_message, response]]
+            return chat_history, "", message_history
+    except:
+        # Fallback nếu có lỗi
+        response = f"Cảm ơn bạn đã quan tâm đến sản phẩm {product_name}! Đây là một sản phẩm tuyệt vời của Techcombank."
+        chat_history = [
+            {"role": "user", "content": initial_message},
+            {"role": "assistant", "content": response}
+        ]
+        message_history = [[initial_message, response]]
+        return chat_history, "", message_history
+
+def handle_paste_to_pay():
+    """Xử lý nút Paste to Pay - lấy clipboard và gọi API extract"""
+    try:
+        # Lấy dữ liệu từ clipboard
+        clipboard_text = pyperclip.paste()
+        
+        if not clipboard_text or clipboard_text.strip() == "":
+            return "⚠️ Clipboard trống. Vui lòng copy thông tin chuyển tiền trước khi sử dụng Paste to Pay.", "", False, False, None
+        
+        # Gọi API extract
+        api_url = "http://54.81.13.123/extract"
+        payload = {"text": clipboard_text}
+        
+        response = requests.post(api_url, json=payload, timeout=10)
+        
+        if response.status_code == 200:
+            result = response.json()
+            
+            # Case 1: Thành công - có raw_output
+            if result.get("raw_output") is not None:
+                raw_output = result["raw_output"]
+                
+                # Tạo transfer data
+                transfer_data = {
+                    "bank_name": raw_output.get("bank_name", ""),
+                    "bank_acc_number": raw_output.get("bank_acc_number", ""),
+                    "amount": raw_output.get("amount", 0),
+                    "content": raw_output.get("content", "")
+                }
+                
+                # Format số tiền - xử lý cả string và int
+                amount = transfer_data['amount']
+                if isinstance(amount, str):
+                    try:
+                        amount = int(amount)
+                    except ValueError:
+                        amount = 0
+                amount_formatted = f"{amount:,}".replace(",", ".")
+                
+                # Tạo thông tin hiển thị - PHẢI LÀ STRING
+                transfer_info = f"""💳 **XÁC NHẬN CHUYỂN TIỀN**
+
+🏦 **Ngân hàng:** {transfer_data['bank_name']}
+📱 **Số tài khoản:** {transfer_data['bank_acc_number']}
+💰 **Số tiền:** {amount_formatted} VNĐ
+📝 **Nội dung:** {transfer_data['content']}"""
+                
+                global pending_transfer
+                pending_transfer = transfer_data
+                
+                return (
+                    f"📋 Đã phân tích thông tin từ clipboard:\n🏦 {transfer_data['bank_name']}\n📱 {transfer_data['bank_acc_number']}\n💰 {amount_formatted} VNĐ\n📝 {transfer_data['content']}", 
+                    transfer_info,
+                    True,
+                    True,
+                    transfer_data
+                )
+            
+            # Case 2: Không thành công - raw_output = null
+            else:
+                return "⚠️ TECHNOBOT chưa nhận được thông tin chuyển tiền hợp lệ.", "", False, False, None
+        
+        else:
+            return f"❌ Lỗi API: {response.status_code}", "", False, False, None
+            
+    except Exception as e:
+        return f"❌ Lỗi xử lý: {str(e)}", gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), None
+
+def get_mock_response(message, has_history=False):
+    """Tạo mock response khi API không khả dụng"""
+    message_lower = message.lower().strip()
     
-    # Return initial chat with product inquiry (using messages format)
-    chat_history = [
-        {"role": "user", "content": initial_message},
-        {"role": "assistant", "content": bot_response}
-    ]
-    message_history = [f"User: {initial_message}", f"Assistant: {bot_response}"]
+    # Detect transfer patterns
+    transfer_keywords = ['ck', 'chuyển', 'transfer', 'chuyển khoản', 'chuyển tiền']
+    bank_keywords = ['vcb', 'vietcombank', 'techcombank', 'bidv', 'acb', 'mb']
     
-    return chat_history, "", message_history
+    has_transfer_keyword = any(keyword in message_lower for keyword in transfer_keywords)
+    has_bank_keyword = any(keyword in message_lower for keyword in bank_keywords)
+    has_numbers = any(char.isdigit() for char in message)
+    
+    if has_transfer_keyword and (has_bank_keyword or has_numbers):
+        # Mock transfer response
+        return {
+            "action": "transfer_money",
+            "payload": {
+                "amount": 50000,
+                "recipient_account": "1234567890",
+                "bank_name": "Vietcombank",
+                "recipient_name": "Người nhận demo",
+                "memo": "Demo transfer"
+            }
+        }
+    else:
+        # Mock chat response
+        if has_history:
+            answer = f"Tôi hiểu bạn đang nói về '{message}'. Đây là phản hồi demo với context từ cuộc trò chuyện trước đó."
+        else:
+            answer = f"Xin chào! Bạn vừa nói '{message}'. Đây là phản hồi demo từ TECHNOBOT. API thực tế hiện không khả dụng."
+        
+        return {
+            "action": "ask",
+            "payload": {
+                "question": f"Bạn có thể nói rõ hơn về '{message}' không?",
+                "answer": answer
+            }
+        }
 
 # CSS styling
 css = """
@@ -372,6 +471,40 @@ body, .gradio-container {
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
+
+/* Paste to Pay button */
+.paste-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 20px !important;
+}
+
+.paste-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3) !important;
+}
+
+/* Paste result styling */
+.paste-result {
+    background: #2d2d2d !important;
+    border: 1px solid #28a745 !important;
+    border-radius: 8px !important;
+    color: white !important;
+    margin: 10px 0 !important;
+}
+
+.paste-result textarea {
+    background: #2d2d2d !important;
+    color: white !important;
+    border: none !important;
+}
 """
 
 # Create Gradio interface
@@ -379,21 +512,48 @@ with gr.Blocks(css=css, title="TECHNOBOT - Hệ thống Phân tích Tín dụng 
     # State variables
     message_history_state = gr.State([])
     
-    # Header
-    gr.HTML("""
-    <div class="techno-header">
-        <div class="logo-container">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <div style="background: #E30613; padding: 10px; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <span style="color: white; font-size: 24px; font-weight: bold;">🤖</span>
+    # Header with Paste to Pay button
+    with gr.Row():
+        with gr.Column(scale=4):
+            gr.HTML("""
+            <div class="techno-header">
+                <div class="logo-container">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="background: #E30613; padding: 10px; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <span style="color: white; font-size: 24px; font-weight: bold;">🤖</span>
+                        </div>
+                        <h1 class="logo-text" style="margin: 0; font-size: 32px; font-weight: bold;">
+                            <span class="tech-text" style="color: #E30613;">TECH</span><span class="nobot-text" style="color: #ffffff;">NOBOT</span>
+                        </h1>
+                    </div>
                 </div>
-                <h1 class="logo-text" style="margin: 0; font-size: 32px; font-weight: bold;">
-                    <span class="tech-text" style="color: #E30613;">TECH</span><span class="nobot-text" style="color: #ffffff;">NOBOT</span>
-                </h1>
             </div>
-        </div>
-    </div>
-    """)
+            """)
+        with gr.Column(scale=1):
+            paste_to_pay_btn = gr.Button(
+                "📋 Paste to Pay",
+                variant="primary",
+                size="lg",
+                elem_classes=["paste-btn"]
+            )
+    
+    # Paste to Pay result display
+    paste_result = gr.Textbox(
+        label="📋 Kết quả Paste to Pay",
+        visible=False,
+        interactive=False,
+        elem_classes=["paste-result"]
+    )
+    
+    # Transfer confirmation for Paste to Pay
+    paste_transfer_info = gr.Markdown(visible=False, elem_classes=["transfer-info"])
+    
+    with gr.Row(visible=False) as paste_transfer_buttons:
+        paste_confirm_btn = gr.Button("✅ Xác nhận chuyển tiền", variant="primary", elem_classes=["confirm-btn"])
+        paste_cancel_btn = gr.Button("❌ Hủy giao dịch", variant="secondary", elem_classes=["cancel-btn"])
+    
+    # Hidden state for paste transfer data
+    paste_transfer_state = gr.State(None)
     
     # Introduction section
     gr.HTML("""
@@ -619,53 +779,129 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
     
     # Chat functionality with popup handling
     def send_message(message, chat_history, message_history):
-        result = handle_chat_message(message, chat_history, message_history)
+        result = chat_with_technobot(message, chat_history, message_history)
         
         if len(result) == 5:  # Transfer money case
-            chat_hist, input_clear, msg_hist, show_popup, payload = result
-            if show_popup and payload:
-                # Show popup and store transfer data
-                modal_visible, transfer_html = show_transfer_popup(payload)
-                return chat_hist, input_clear, msg_hist, modal_visible, transfer_html, payload
-            else:
-                return chat_hist, input_clear, msg_hist, gr.update(visible=False), "", None
-        else:  # Regular case
-            chat_hist, input_clear, msg_hist = result
-            return chat_hist, input_clear, msg_hist, gr.update(visible=False), "", None
+            new_history, empty_msg, new_msg_history, transfer_info_update, modal_update = result
+            return new_history, empty_msg, new_msg_history, transfer_info_update, modal_update
+        else:  # Regular chat case
+            new_history, empty_msg, new_msg_history = result[:3]
+            return new_history, empty_msg, new_msg_history, gr.update(value=""), gr.update(visible=False)
+    
+    # Connect chat input
+    chat_input.submit(
+        fn=send_message,
+        inputs=[chat_input, chatbot, message_history_state],
+        outputs=[chatbot, chat_input, message_history_state, transfer_info, transfer_modal]
+    )
     
     send_btn.click(
-        send_message,
+        fn=send_message,
         inputs=[chat_input, chatbot, message_history_state],
-        outputs=[chatbot, chat_input, message_history_state, transfer_modal, transfer_info, transfer_data]
+        outputs=[chatbot, chat_input, message_history_state, transfer_info, transfer_modal]
     )
     
-    chat_input.submit(
-        send_message,
-        inputs=[chat_input, chatbot, message_history_state],
-        outputs=[chatbot, chat_input, message_history_state, transfer_modal, transfer_info, transfer_data]
-    )
+    # Transfer confirmation handlers - cần cập nhật transfer_data state
+    def handle_chat_confirm():
+        global pending_transfer
+        if pending_transfer:
+            amount = pending_transfer.get('amount', 0)
+            recipient_account = pending_transfer.get('recipient_account', 'N/A')
+            bank_name = pending_transfer.get('bank_name', 'N/A')
+            recipient_name = pending_transfer.get('recipient_name', 'N/A')
+            memo = pending_transfer.get('memo', 'N/A')
+            
+            success_msg = f"""🏦 **TECHCOMBANK - XÁC NHẬN CHUYỂN TIỀN**
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 **Số tiền:** {amount:,} VND
+🏦 **Ngân hàng nhận:** {bank_name}
+📱 **Số tài khoản:** {recipient_account}
+👤 **Người nhận:** {recipient_name}
+📝 **Nội dung:** {memo}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ **GIAO DỊCH ĐÃ ĐƯỢC THỰC HIỆN THÀNH CÔNG!**
+
+🔢 **Mã giao dịch:** TCB{amount}{recipient_account[-4:]}
+⏰ **Thời gian:** {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
+            
+            pending_transfer = None
+            return gr.update(visible=False), "", [{"role": "assistant", "content": success_msg}]
+        return gr.update(visible=False), "", []
     
-    # Transfer popup event handlers
-    def handle_confirm(data, chat_hist):
-        modal_update, info_update, new_messages = confirm_transfer(data)
-        updated_chat = chat_hist + new_messages
-        return modal_update, info_update, updated_chat
-    
-    def handle_cancel(chat_hist):
-        modal_update, info_update, new_messages = cancel_transfer()
-        updated_chat = chat_hist + new_messages
-        return modal_update, info_update, updated_chat
+    def handle_chat_cancel():
+        global pending_transfer
+        pending_transfer = None
+        cancel_msg = "❌ **Giao dịch đã được hủy thành công!**\n\nQuý khách có thể thực hiện giao dịch mới bất kỳ lúc nào."
+        return gr.update(visible=False), "", [{"role": "assistant", "content": cancel_msg}]
     
     confirm_btn.click(
-        handle_confirm,
-        inputs=[transfer_data, chatbot],
+        fn=handle_chat_confirm,
         outputs=[transfer_modal, transfer_info, chatbot]
     )
     
     cancel_btn.click(
-        handle_cancel,
-        inputs=[chatbot],
+        fn=handle_chat_cancel,
         outputs=[transfer_modal, transfer_info, chatbot]
+    )
+
+    # Paste to Pay event handler
+    def handle_paste_click():
+        result_text, transfer_info, info_visible, buttons_visible, transfer_data = handle_paste_to_pay()
+        return (
+            gr.update(value=result_text, visible=True), 
+            gr.update(value=transfer_info, visible=info_visible),
+            gr.update(visible=buttons_visible),
+            transfer_data
+        )
+    
+    paste_to_pay_btn.click(
+        fn=handle_paste_click,
+        outputs=[paste_result, paste_transfer_info, paste_transfer_buttons, paste_transfer_state]
+    )
+
+    # Paste transfer confirmation handlers
+    def handle_paste_confirm(transfer_data):
+        if transfer_data:
+            amount = transfer_data.get('amount', 0)
+            if isinstance(amount, str):
+                try:
+                    amount = int(amount)
+                except ValueError:
+                    amount = 0
+            amount_formatted = f"{amount:,}".replace(",", ".")
+            
+            success_msg = f"✅ **CHUYỂN TIỀN THÀNH CÔNG!**\n\n🏦 Ngân hàng: {transfer_data['bank_name']}\n📱 Số TK: {transfer_data['bank_acc_number']}\n💰 Số tiền: {amount_formatted} VNĐ\n📝 Nội dung: {transfer_data['content']}\n\n🎉 Giao dịch đã được thực hiện thành công!"
+            return (
+                gr.update(value=success_msg, visible=True),
+                gr.update(visible=False),
+                gr.update(visible=False)
+            )
+        return gr.update(), gr.update(), gr.update()
+    
+    def handle_paste_cancel():
+        return (
+            gr.update(value="❌ Đã hủy giao dịch chuyển tiền.", visible=True),
+            gr.update(visible=False),
+            gr.update(visible=False)
+        )
+    
+    paste_confirm_btn.click(
+        fn=handle_paste_confirm,
+        inputs=[paste_transfer_state],
+        outputs=[paste_result, paste_transfer_info, paste_transfer_buttons]
+    )
+    
+    paste_cancel_btn.click(
+        fn=handle_paste_cancel,
+        outputs=[paste_result, paste_transfer_info, paste_transfer_buttons]
     )
 
 # Launch the app
