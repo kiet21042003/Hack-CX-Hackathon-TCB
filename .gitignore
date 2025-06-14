@@ -2,7 +2,7 @@
 model/*.joblib
 # model/*_model_*.joblib
 model/*random_forest*
-model/*ensemble*
+model/*ensemble* 
 # model/best_model_*.joblib
 # *.joblib
 # *.pkl

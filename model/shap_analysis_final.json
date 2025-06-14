@@ -1,9 +1,9 @@
 {
-  "analysis_date": "2025-06-14T16:36:58.029889",
+  "analysis_date": "2025-06-15T01:29:40.613342",
   "model_performance": {
-    "auc_roc": 0.7220191342526316,
-    "precision_at_3": 0.3963027151935297,
-    "recall_at_3": 0.8835726665016093
+    "auc_roc": 0.7219508679511433,
+    "precision_at_3": 0.39613765783609806,
+    "recall_at_3": 0.883201287447388
   },
   "shap_analysis_info": {
     "original_shap_shape": [
