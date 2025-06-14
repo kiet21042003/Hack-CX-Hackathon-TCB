@@ -1,0 +1,61 @@
+{
+  "analysis_date": "2025-06-14T16:36:58.029889",
+  "model_performance": {
+    "auc_roc": 0.7220191342526316,
+    "precision_at_3": 0.3963027151935297,
+    "recall_at_3": 0.8835726665016093
+  },
+  "shap_analysis_info": {
+    "original_shap_shape": [
+      100,
+      118,
+      2
+    ],
+    "processed_shap_shape": [
+      100,
+      118
+    ],
+    "samples_analyzed": 100,
+    "features_analyzed": 118,
+    "binary_classification": true
+  },
+  "top_10_features": [
+    {
+      "rank": 1,
+      "feature_name": "total_adoptions_x",
+      "shap_importance": 0.06456096467901648,
+      "business_interpretation": "Historical adoption behavior strongly predicts future adoption"
+    },
+    {
+      "rank": 2,
+      "feature_name": "total_interactions",
+      "shap_importance": 0.038943322466409205,
+      "business_interpretation": "Customer engagement level across all touchpoints"
+    },
+    {
+      "rank": 3,
+      "feature_name": "price_sensitivity",
+      "shap_importance": 0.03256184572212084,
+      "business_interpretation": "Customer price consciousness affects adoption decisions"
+    },
+    {
+      "rank": 4,
+      "feature_name": "churn_risk",
+      "shap_importance": 0.02869208586953182,
+      "business_interpretation": "Customer retention risk influences product adoption"
+    },
+    {
+      "rank": 5,
+      "feature_name": "adoption_rate_x",
+      "shap_importance": 0.009956091429467696,
+      "business_interpretation": "Customer adoption velocity and propensity"
+    }
+  ],
+  "business_recommendations": [
+    "Focus targeting on customers with high total_adoptions_x",
+    "Develop engagement strategies around total_interactions",
+    "Monitor price_sensitivity as key engagement metric",
+    "Use these top features for customer segmentation and scoring",
+    "Build predictive rules based on top SHAP feature thresholds"
+  ]
+}

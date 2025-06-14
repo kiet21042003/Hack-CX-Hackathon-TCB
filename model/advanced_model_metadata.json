@@ -1,6 +1,6 @@
 {
   "model_type": "Advanced Ensemble Recommender",
-  "creation_date": "2025-06-14 09:36:11",
+  "creation_date": "2025-06-14 16:31:13",
   "models_used": [
     "logistic",
     "random_forest",
@@ -10,9 +10,9 @@
   ],
   "features_selected": 28,
   "total_features": 118,
-  "auc_roc": 0.7219508679511433,
-  "precision_at_3": 0.39613765783609806,
-  "targets_met": 0,
+  "auc_roc": 0.7220191342526316,
+  "precision_at_3": 0.3963027151935297,
+  "targets_met": 1,
   "dataset_size": 200000,
   "adoption_rate": 0.24
 }

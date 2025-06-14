@@ -3,7 +3,7 @@
   "model_metadata": {
     "model_type": "Advanced Ensemble Recommender",
     "version": "1.0.0",
-    "created_at": "2025-06-14T12:14:45.287871",
+    "created_at": "2025-06-14T16:31:18.865790",
     "performance_metrics": {
       "auc_roc": 0.722,
       "precision_at_3": 0.396,
@@ -23,31 +23,31 @@
     {
       "user_id": "ad089c26-f733-4535-9901-bfbf827272b5",
       "error": "\"['product_name', 'price', 'description'] not in index\"",
-      "timestamp": "2025-06-14T12:14:43.289939",
+      "timestamp": "2025-06-14T16:31:16.398849",
       "recommendations": []
     },
     {
       "user_id": "1fce992a-435c-4363-917c-aed958213b43",
       "error": "\"['product_name', 'price', 'description'] not in index\"",
-      "timestamp": "2025-06-14T12:14:43.861000",
+      "timestamp": "2025-06-14T16:31:16.987117",
       "recommendations": []
     },
     {
       "user_id": "26b6cb73-8bb6-4bf5-a7a0-c932721e1df9",
       "error": "\"['product_name', 'price', 'description'] not in index\"",
-      "timestamp": "2025-06-14T12:14:44.327603",
+      "timestamp": "2025-06-14T16:31:17.629064",
       "recommendations": []
     },
     {
       "user_id": "51c75821-5a6e-4e29-948b-2ecfdc9cc12f",
       "error": "\"['product_name', 'price', 'description'] not in index\"",
-      "timestamp": "2025-06-14T12:14:44.802264",
+      "timestamp": "2025-06-14T16:31:18.251830",
       "recommendations": []
     },
     {
       "user_id": "3d29ae48-1838-44ba-ae30-8a8c4275d138",
       "error": "\"['product_name', 'price', 'description'] not in index\"",
-      "timestamp": "2025-06-14T12:14:45.269324",
+      "timestamp": "2025-06-14T16:31:18.847910",
       "recommendations": []
     }
   ],
