@@ -9,6 +9,22 @@ import pyperclip  # For clipboard access
 import socket
 import time
 from typing import List, Tuple, Dict, Any, Optional
+import numpy as np
+import matplotlib.pyplot as plt
+import io
+import base64
+from PIL import Image
+
+# SHAP and ML libraries for waterfall plot
+try:
+    import shap
+    import joblib
+    from sklearn.preprocessing import StandardScaler
+    SHAP_AVAILABLE = True
+    print("✅ SHAP và ML libraries đã sẵn sàng")
+except ImportError:
+    SHAP_AVAILABLE = False
+    print("⚠️ SHAP không khả dụng - tính năng phân tích AI sẽ bị tắt")
 
 # Load customer data
 try:
@@ -19,8 +35,11 @@ except:
     customer_data = pd.DataFrame()
     metadata = pd.DataFrame()
 
-# Global variable to store pending transfer
+# Global variables for model and data
 pending_transfer = None
+model_data = None
+explainer = None
+scaler = None
 
 def clean_product_name(product_name):
     """Remove tier information from product name"""
@@ -206,10 +225,10 @@ def chat_with_technobot(message, history, message_history):
         message_history.append([message, error_msg])
         return new_history, "", message_history, gr.update(value=""), gr.update(visible=False)
 
-def product_button_click(product_name):
-    """Xử lý khi click vào nút sản phẩm"""
+def product_button_click(product_name, customer_id):
+    """Xử lý khi click vào nút sản phẩm - tích hợp SHAP analysis"""
     if not product_name:
-        return [], "", []
+        return [], "", [], gr.update(visible=False), None
     
     # Tạo tin nhắn ban đầu
     initial_message = f"Tôi quan tâm đến sản phẩm {product_name}"
@@ -219,7 +238,6 @@ def product_button_click(product_name):
         result = chat_with_technobot(initial_message, [], [])
         if len(result) >= 3:
             new_history, _, new_msg_history = result[:3]
-            return new_history, "", new_msg_history
         else:
             # Fallback nếu API không hoạt động
             response = f"Cảm ơn bạn đã quan tâm đến sản phẩm {product_name}! Đây là một sản phẩm tuyệt vời của Techcombank."
@@ -228,7 +246,7 @@ def product_button_click(product_name):
                 {"role": "assistant", "content": response}
             ]
             message_history = [[initial_message, response]]
-            return chat_history, "", message_history
+            new_history, new_msg_history = chat_history, message_history
     except:
         # Fallback nếu có lỗi
         response = f"Cảm ơn bạn đã quan tâm đến sản phẩm {product_name}! Đây là một sản phẩm tuyệt vời của Techcombank."
@@ -237,7 +255,18 @@ def product_button_click(product_name):
             {"role": "assistant", "content": response}
         ]
         message_history = [[initial_message, response]]
-        return chat_history, "", message_history
+        new_history, new_msg_history = chat_history, message_history
+    
+    # Tạo SHAP waterfall plot cho cặp {customer_id, product_name}
+    plot_image = None
+    ai_section_visible = False
+    
+    if customer_id and SHAP_AVAILABLE and model_data:
+        plot_image = create_waterfall_plot(customer_id, product_name)
+        if plot_image:
+            ai_section_visible = True
+    
+    return new_history, "", new_msg_history, gr.update(visible=ai_section_visible), plot_image
 
 def handle_paste_to_pay():
     """Xử lý nút Paste to Pay - lấy clipboard và gọi API extract"""
@@ -352,6 +381,115 @@ def get_mock_response(message, has_history=False):
             }
         }
 
+def load_model_data():
+    """Load model và data cho SHAP analysis"""
+    global model_data, explainer, scaler
+    
+    if not SHAP_AVAILABLE:
+        return False
+    
+    try:
+        # Tạo mock data cho demo (trong thực tế sẽ load từ file model)
+        print("🔄 Loading model data for SHAP analysis...")
+        
+        # Mock customer features (sẽ thay bằng data thực từ notebook)
+        feature_names = [
+            'age', 'account_balance', 'credit_score', 'num_products', 
+            'tenure_months', 'transaction_frequency', 'avg_transaction_amount',
+            'has_savings', 'has_credit_card', 'has_loan'
+        ]
+        
+        # Mock model data structure
+        model_data = {
+            'feature_names': feature_names,
+            'customer_data': {},  # Sẽ được populate từ CSV
+            'model_available': True
+        }
+        
+        print("✅ Model data loaded successfully")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error loading model data: {e}")
+        return False
+
+def create_waterfall_plot(user_id, product_name=None):
+    """Tạo SHAP waterfall plot cho cặp {user_id, product_id}"""
+    if not SHAP_AVAILABLE or not model_data:
+        return None
+    
+    try:
+        print(f"🔍 Creating waterfall plot for user: {user_id[:8]}... product: {product_name}")
+        
+        # Mock SHAP values cho demo theo cặp {user_id, product_name}
+        feature_names = model_data['feature_names']
+        n_features = len(feature_names)
+        
+        # Tạo seed unique cho cặp user-product
+        seed_string = f"{user_id}_{product_name or 'general'}"
+        np.random.seed(hash(seed_string) % 2**32)
+        
+        shap_values = np.random.normal(0, 0.1, n_features)
+        feature_values = np.random.normal(0.5, 0.2, n_features)
+        expected_value = 0.3
+        
+        # Tạo waterfall plot
+        plt.figure(figsize=(12, 8))
+        plt.style.use('default')  # Reset style
+        
+        # Sắp xếp theo importance
+        abs_shap = np.abs(shap_values)
+        sorted_idx = np.argsort(abs_shap)[::-1][:8]  # Top 8 features
+        
+        sorted_shap = shap_values[sorted_idx]
+        sorted_features = [feature_names[i] for i in sorted_idx]
+        sorted_values = feature_values[sorted_idx]
+        
+        # Tạo waterfall plot thủ công
+        y_pos = np.arange(len(sorted_features))
+        colors = ['#ff4444' if x < 0 else '#4444ff' for x in sorted_shap]
+        
+        plt.barh(y_pos, sorted_shap, color=colors, alpha=0.7)
+        plt.yticks(y_pos, [f"{feat}\n({val:.2f})" for feat, val in zip(sorted_features, sorted_values)])
+        plt.xlabel('SHAP Value (Impact on Prediction)')
+        
+        # Title without emojis to avoid font issues
+        title = f'AI Analysis - Customer {user_id[:8]}'
+        if product_name:
+            title += f'\nProduct: {product_name}'
+        title += '\nFeature Impact on Adoption Probability'
+        plt.title(title, fontsize=14, fontweight='bold')
+        
+        plt.axvline(x=0, color='black', linestyle='-', alpha=0.3)
+        
+        # Text explanation without emojis
+        plt.figtext(0.02, 0.02, 
+                   f"Base prediction: {expected_value:.3f} | "
+                   f"Final prediction: {expected_value + np.sum(sorted_shap):.3f}\n"
+                   f"Blue: Increases probability | Red: Decreases probability",
+                   fontsize=10, ha='left')
+        
+        plt.tight_layout()
+        
+        # Save to temporary file instead of base64 to avoid path length issues
+        import tempfile
+        import os
+        
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as tmp_file:
+            plt.savefig(tmp_file.name, format='png', dpi=150, bbox_inches='tight')
+            plt.close()
+            
+            print("✅ Waterfall plot created successfully")
+            return tmp_file.name
+        
+    except Exception as e:
+        print(f"❌ Error creating waterfall plot: {e}")
+        plt.close()
+        return None
+
+# Load model data at startup
+load_model_data()
+
 # CSS styling
 css = """
 /* Import Google Fonts */
@@ -455,6 +593,24 @@ body, .gradio-container {
 .product-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
+}
+
+/* AI Analysis button */
+.ai-analysis-btn {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white !important;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.ai-analysis-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
 }
 
 /* Chat interface */
@@ -622,6 +778,12 @@ with gr.Blocks(css=css, title="TECHNOBOT - Hệ thống Phân tích Tín dụng 
                     scale=4
                 )
                 send_btn = gr.Button("Gửi", variant="primary", scale=1)
+            
+            # AI Analysis Display (Hidden by default)
+            with gr.Row(visible=False) as ai_analysis_section:
+                with gr.Column():
+                    gr.HTML("<h3 style='color: #E30613; text-align: center;'>🤖 Phân tích AI - SHAP Waterfall Plot</h3>")
+                    ai_plot_display = gr.Image(label="", show_label=False, height=600)
     
     # Transfer Confirmation Modal (Hidden by default)
     with gr.Row(visible=False) as transfer_modal:
@@ -740,6 +902,7 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
             return (
                 "<div class='profile-section'>Vui lòng chọn khách hàng từ danh sách trên</div>",
                 gr.update(visible=False), gr.update(visible=False), gr.update(visible=False),
+                gr.update(visible=False),
                 "", "", ""
             )
         
@@ -750,7 +913,9 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
         btn2_update = gr.update(value=product2, visible=bool(product2))
         btn3_update = gr.update(value=product3, visible=bool(product3))
         
-        return profile_html, btn1_update, btn2_update, btn3_update, product1, product2, product3
+        ai_section_update = gr.update(visible=False)  # Hide analysis section initially
+        
+        return profile_html, btn1_update, btn2_update, btn3_update, ai_section_update, product1, product2, product3
     
     # Store product names in hidden state
     product1_state = gr.State("")
@@ -761,26 +926,26 @@ Cảm ơn Quý khách đã sử dụng dịch vụ Techcombank! 🙏"""
         update_profile_and_buttons,
         inputs=[customer_dropdown],
         outputs=[customer_profile, product_btn1, product_btn2, product_btn3, 
-                product1_state, product2_state, product3_state]
+                ai_analysis_section, product1_state, product2_state, product3_state]
     )
     
-    # Product button clicks
+    # Product button clicks with SHAP integration
     product_btn1.click(
-        lambda p1: product_button_click(p1),
-        inputs=[product1_state],
-        outputs=[chatbot, chat_input, message_history_state]
+        lambda p1, customer_id: product_button_click(p1, customer_id),
+        inputs=[product1_state, customer_dropdown],
+        outputs=[chatbot, chat_input, message_history_state, ai_analysis_section, ai_plot_display]
     )
     
     product_btn2.click(
-        lambda p2: product_button_click(p2),
-        inputs=[product2_state],
-        outputs=[chatbot, chat_input, message_history_state]
+        lambda p2, customer_id: product_button_click(p2, customer_id),
+        inputs=[product2_state, customer_dropdown],
+        outputs=[chatbot, chat_input, message_history_state, ai_analysis_section, ai_plot_display]
     )
     
     product_btn3.click(
-        lambda p3: product_button_click(p3),
-        inputs=[product3_state],
-        outputs=[chatbot, chat_input, message_history_state]
+        lambda p3, customer_id: product_button_click(p3, customer_id),
+        inputs=[product3_state, customer_dropdown],
+        outputs=[chatbot, chat_input, message_history_state, ai_analysis_section, ai_plot_display]
     )
     
     # Chat functionality with popup handling

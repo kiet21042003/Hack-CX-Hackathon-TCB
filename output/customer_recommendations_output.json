@@ -12,7 +12,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.451797"
+    "timestamp": "2025-06-15T10:14:33.292146"
   },
   {
     "user_id": "d825888f-5e1f-4866-af06-c37da5e9aef0",
@@ -27,7 +27,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.458802"
+    "timestamp": "2025-06-15T10:14:33.302805"
   },
   {
     "user_id": "f8dbebe7-cd13-405b-9c98-c28846911b09",
@@ -42,7 +42,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.465820"
+    "timestamp": "2025-06-15T10:14:33.313219"
   },
   {
     "user_id": "aaa068d2-72b1-47a0-afe0-90917664386c",
@@ -57,7 +57,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.472813"
+    "timestamp": "2025-06-15T10:14:33.322223"
   },
   {
     "user_id": "a2b60686-035e-41fc-98b8-1597717dcf29",
@@ -72,7 +72,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.479521"
+    "timestamp": "2025-06-15T10:14:33.331721"
   },
   {
     "user_id": "0a580cec-792e-4448-a4e1-4af4ad4729ea",
@@ -87,7 +87,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.486506"
+    "timestamp": "2025-06-15T10:14:33.339573"
   },
   {
     "user_id": "777cb34a-6c22-4856-b92c-95010c46abc4",
@@ -102,7 +102,7 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.493516"
+    "timestamp": "2025-06-15T10:14:33.348644"
   },
   {
     "user_id": "26b3bacf-f868-42cd-b38f-fad793010e45",
@@ -117,7 +117,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.500499"
+    "timestamp": "2025-06-15T10:14:33.357825"
   },
   {
     "user_id": "2c4673cb-9da1-4986-a2f1-a69ba72ef28c",
@@ -132,7 +132,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": false,
     "adopted_products_count": 0,
-    "timestamp": "2025-06-15T02:41:04.507501"
+    "timestamp": "2025-06-15T10:14:33.368920"
   },
   {
     "user_id": "1894d019-172e-4aa6-9308-3b7c1efdf2f7",
@@ -147,7 +147,7 @@
     "recommended_product_name_3": "SavingsAccount tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.513506"
+    "timestamp": "2025-06-15T10:14:33.377255"
   },
   {
     "user_id": "75c2fa27-2694-4175-aaee-1a92e06d0848",
@@ -162,7 +162,7 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.520512"
+    "timestamp": "2025-06-15T10:14:33.387451"
   },
   {
     "user_id": "ea1abe2a-d9ea-43f4-a9b2-79eddea6e09d",
@@ -177,7 +177,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.527740"
+    "timestamp": "2025-06-15T10:14:33.395169"
   },
   {
     "user_id": "0653d3a2-f454-4451-b1d7-14be641e1ecb",
@@ -192,7 +192,7 @@
     "recommended_product_name_3": "PersonalLoan tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.534758"
+    "timestamp": "2025-06-15T10:14:33.403682"
   },
   {
     "user_id": "c54d9fe2-72a6-4e8d-a418-3d4a350a927e",
@@ -207,7 +207,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.541740"
+    "timestamp": "2025-06-15T10:14:33.411129"
   },
   {
     "user_id": "f1289ab3-5226-4cbc-aa8d-2b7145641d52",
@@ -222,7 +222,7 @@
     "recommended_product_name_3": "FXTransfer tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.549035"
+    "timestamp": "2025-06-15T10:14:33.419945"
   },
   {
     "user_id": "3ed3fa0b-4a98-49d5-a321-c0c578d87de9",
@@ -237,7 +237,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.556019"
+    "timestamp": "2025-06-15T10:14:33.428978"
   },
   {
     "user_id": "5db81c2e-c80c-447b-a84b-d64ef1c5bbea",
@@ -252,7 +252,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.563024"
+    "timestamp": "2025-06-15T10:14:33.436463"
   },
   {
     "user_id": "f0891ef7-0fe1-44fe-bb4e-b5bb5442ae97",
@@ -267,7 +267,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.569028"
+    "timestamp": "2025-06-15T10:14:33.444430"
   },
   {
     "user_id": "8fcd7e7a-a9e8-47df-8d6b-b0d09545af3b",
@@ -282,7 +282,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.576575"
+    "timestamp": "2025-06-15T10:14:33.451661"
   },
   {
     "user_id": "6c3486cf-44ea-4bac-ab14-ba717f234e3f",
@@ -297,7 +297,7 @@
     "recommended_product_name_3": "PersonalLoan tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.583588"
+    "timestamp": "2025-06-15T10:14:33.458647"
   },
   {
     "user_id": "84ea7930-8d8a-401a-864f-a3009a7f8364",
@@ -312,7 +312,7 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.590886"
+    "timestamp": "2025-06-15T10:14:33.469489"
   },
   {
     "user_id": "d2a6cf35-c006-441c-b27d-96f13f0e6fb8",
@@ -327,7 +327,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.597902"
+    "timestamp": "2025-06-15T10:14:33.478656"
   },
   {
     "user_id": "987018f2-c7bf-4453-8727-20afcb7c0e38",
@@ -342,7 +342,7 @@
     "recommended_product_name_3": "SavingsAccount tier Gold",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.604892"
+    "timestamp": "2025-06-15T10:14:33.488324"
   },
   {
     "user_id": "82b89537-3342-43c4-928a-a07809d3775f",
@@ -357,7 +357,7 @@
     "recommended_product_name_3": "SavingsAccount tier Gold",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.611875"
+    "timestamp": "2025-06-15T10:14:33.497254"
   },
   {
     "user_id": "67d57688-cc62-4141-8775-9dc98834fea8",
@@ -372,7 +372,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.619330"
+    "timestamp": "2025-06-15T10:14:33.506236"
   },
   {
     "user_id": "482e1117-57a9-4a51-a8a2-d152152a5979",
@@ -387,7 +387,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.625335"
+    "timestamp": "2025-06-15T10:14:33.514157"
   },
   {
     "user_id": "e8b72837-1e65-4efe-9656-6b4511641535",
@@ -402,7 +402,7 @@
     "recommended_product_name_3": "DebitCard tier Platinum",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.632341"
+    "timestamp": "2025-06-15T10:14:33.522080"
   },
   {
     "user_id": "162efb6b-1934-4914-b8d0-ebf8bf01c99e",
@@ -417,7 +417,7 @@
     "recommended_product_name_3": "SavingsAccount tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.640330"
+    "timestamp": "2025-06-15T10:14:33.530998"
   },
   {
     "user_id": "4ab337c5-879f-464c-be1c-aa2f1d85e928",
@@ -432,7 +432,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.647329"
+    "timestamp": "2025-06-15T10:14:33.541905"
   },
   {
     "user_id": "93ceb78d-24e2-426f-959a-12754fb03dc5",
@@ -447,7 +447,7 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": false,
     "adopted_products_count": 0,
-    "timestamp": "2025-06-15T02:41:04.654339"
+    "timestamp": "2025-06-15T10:14:33.548813"
   },
   {
     "user_id": "4ed6d985-485e-4c43-be29-75d33bb54d55",
@@ -462,7 +462,7 @@
     "recommended_product_name_3": "Mortgage tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.660359"
+    "timestamp": "2025-06-15T10:14:33.557024"
   },
   {
     "user_id": "3f119511-0685-4f5d-856f-1c12c51e67ad",
@@ -477,7 +477,7 @@
     "recommended_product_name_3": "Overdraft tier Platinum",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.667336"
+    "timestamp": "2025-06-15T10:14:33.564703"
   },
   {
     "user_id": "0f5d58bf-987b-46d2-9590-b232105e12f9",
@@ -492,7 +492,7 @@
     "recommended_product_name_3": "SavingsAccount tier Gold",
     "recommendation_success": false,
     "adopted_products_count": 0,
-    "timestamp": "2025-06-15T02:41:04.674861"
+    "timestamp": "2025-06-15T10:14:33.573139"
   },
   {
     "user_id": "38f21e07-aa1f-4fca-b575-b88b217e4c7b",
@@ -507,7 +507,7 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.680874"
+    "timestamp": "2025-06-15T10:14:33.580816"
   },
   {
     "user_id": "9db68952-c9cd-4ed3-97db-d33dd450e6ab",
@@ -522,7 +522,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.687876"
+    "timestamp": "2025-06-15T10:14:33.588849"
   },
   {
     "user_id": "78ba86dd-4a22-4095-8978-839f0da8c4d2",
@@ -537,7 +537,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.693868"
+    "timestamp": "2025-06-15T10:14:33.596479"
   },
   {
     "user_id": "39c3d2a7-9c26-4663-a302-3ad03d45d128",
@@ -552,7 +552,7 @@
     "recommended_product_name_3": "SavingsAccount tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.700866"
+    "timestamp": "2025-06-15T10:14:33.605534"
   },
   {
     "user_id": "4ea1fce5-681e-4cc1-9bf7-ff6cf07f0488",
@@ -567,7 +567,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.707877"
+    "timestamp": "2025-06-15T10:14:33.612497"
   },
   {
     "user_id": "9186accf-f968-456b-b7f7-b8fc61746747",
@@ -582,7 +582,7 @@
     "recommended_product_name_3": "FXTransfer tier Standard",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.714873"
+    "timestamp": "2025-06-15T10:14:33.620164"
   },
   {
     "user_id": "ad09d6f5-64c9-4211-a333-909ca6e0b6be",
@@ -597,7 +597,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.723211"
+    "timestamp": "2025-06-15T10:14:33.627128"
   },
   {
     "user_id": "d7901806-dca2-4ca5-a982-879e074dceef",
@@ -612,7 +612,7 @@
     "recommended_product_name_3": "PersonalLoan tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.730205"
+    "timestamp": "2025-06-15T10:14:33.634063"
   },
   {
     "user_id": "46276501-489d-4399-a334-bfb17a2dce7b",
@@ -627,7 +627,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.737205"
+    "timestamp": "2025-06-15T10:14:33.642044"
   },
   {
     "user_id": "912d1418-3330-4239-84a9-6989b3d6f232",
@@ -642,7 +642,7 @@
     "recommended_product_name_3": null,
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.744207"
+    "timestamp": "2025-06-15T10:14:33.650048"
   },
   {
     "user_id": "88606a72-d2f2-4ec6-9b16-4280855a9604",
@@ -657,7 +657,7 @@
     "recommended_product_name_3": "Overdraft tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.751267"
+    "timestamp": "2025-06-15T10:14:33.658135"
   },
   {
     "user_id": "0b0748e8-7784-4610-8558-ba1c1cf62cf5",
@@ -672,7 +672,7 @@
     "recommended_product_name_3": "FXTransfer tier Infinite",
     "recommendation_success": true,
     "adopted_products_count": 2,
-    "timestamp": "2025-06-15T02:41:04.758213"
+    "timestamp": "2025-06-15T10:14:33.666938"
   },
   {
     "user_id": "5db9b271-0c90-4f67-8377-0b2e13fc0251",
@@ -687,6 +687,6 @@
     "recommended_product_name_3": "FXTransfer tier Signature",
     "recommendation_success": true,
     "adopted_products_count": 1,
-    "timestamp": "2025-06-15T02:41:04.765210"
+    "timestamp": "2025-06-15T10:14:33.673811"
   }
 ]

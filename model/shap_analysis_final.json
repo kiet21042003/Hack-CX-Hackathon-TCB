@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-06-15T01:29:40.613342",
+  "analysis_date": "2025-06-15T10:14:31.416184",
   "model_performance": {
     "auc_roc": 0.7219508679511433,
     "precision_at_3": 0.39613765783609806,
